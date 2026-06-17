@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yuanta CB Weekly Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Yuanta CB Weekly</p>
+        <h1>可轉債市場資訊週評儀表板</h1>
+      </div>
+      <div class="period" id="period"></div>
+    </header>
+
+    <main>
+      <section class="summary-grid" id="summary"></section>
+
+      <section class="warnings" id="warnings"></section>
+
+      <section class="toolbar" aria-label="watchlist controls">
+        <input id="search" type="search" placeholder="搜尋代碼或名稱" />
+        <select id="signalFilter">
+          <option value="">全部訊號</option>
+        </select>
+        <select id="riskFilter">
+          <option value="">全部風險</option>
+          <option value="低">低</option>
+          <option value="中">中</option>
+          <option value="高">高</option>
+        </select>
+        <select id="sortBy">
+          <option value="score">依分數排序</option>
+          <option value="volume">依成交量排序</option>
+          <option value="remaining">依剩餘比率排序</option>
+          <option value="listing">依掛牌日排序</option>
+        </select>
+        <button id="exportCsv" type="button">匯出 CSV</button>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>CBAS Priority Watchlist</h2>
+          <span id="resultCount"></span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>排名</th>
+                <th>代碼</th>
+                <th>名稱</th>
+                <th>分數</th>
+                <th>訊號</th>
+                <th>風險</th>
+                <th>建議動作</th>
+                <th>交易解讀</th>
+              </tr>
+            </thead>
+            <tbody id="watchlistBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="tables-grid" id="detailTables"></section>
+    </main>
+
+    <dialog id="detailModal">
+      <div class="modal-head">
+        <div>
+          <p id="modalCode" class="eyebrow"></p>
+          <h2 id="modalTitle"></h2>
+        </div>
+        <button id="closeModal" type="button">關閉</button>
+      </div>
+      <div id="modalContent"></div>
+    </dialog>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+*.log
+.git/
+.gitrepo/
+
+# Root-level source PDFs are local working copies. Canonical raw inputs live in data/raw/.
+/可轉換公司債市場相關資訊週評*.pdf

@@ -1,0 +1,11 @@
+{
+  "name": "yuanta-cb-weekly-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "update:weekly": "python scripts/update_weekly.py && python scripts/test_weekly.py",
+    "dev": "python -m http.server 5173 -d dist",
+    "build": "python scripts/update_weekly.py",
+    "test": "python scripts/test_weekly.py"
+  }
+}

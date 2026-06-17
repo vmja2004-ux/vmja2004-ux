@@ -1,0 +1,290 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --panel: #ffffff;
+  --text: #172033;
+  --muted: #697386;
+  --line: #dde3ec;
+  --green: #16835a;
+  --yellow: #9a6a00;
+  --red: #b42318;
+  --blue: #2563eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+}
+
+.topbar {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 32px 18px;
+  background: #101828;
+  color: white;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.eyebrow {
+  color: #9fb0ca;
+  font-size: 12px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.period {
+  color: #d6e0ef;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+main {
+  padding: 24px 32px 40px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.metric,
+.panel,
+.warning-card,
+.table-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.metric {
+  padding: 14px;
+}
+
+.metric strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 26px;
+}
+
+.metric.wide {
+  grid-column: 1 / -1;
+}
+
+.warnings {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.warning-card {
+  padding: 12px 14px;
+  border-left: 4px solid var(--yellow);
+  color: #594400;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+input,
+select,
+button {
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: white;
+  color: var(--text);
+  font: inherit;
+  padding: 0 12px;
+}
+
+button {
+  cursor: pointer;
+  background: #1d4ed8;
+  color: white;
+  border-color: #1d4ed8;
+  font-weight: 650;
+}
+
+.panel {
+  overflow: hidden;
+}
+
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th,
+td {
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background: #f0f5ff;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge.priority {
+  background: #dcfce7;
+  color: var(--green);
+}
+
+.badge.watch {
+  background: #fef3c7;
+  color: var(--yellow);
+}
+
+.badge.avoid {
+  background: #fee4e2;
+  color: var(--red);
+}
+
+.badge.event {
+  background: #dbeafe;
+  color: var(--blue);
+}
+
+.risk-high {
+  color: var(--red);
+  font-weight: 700;
+}
+
+.risk-mid {
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.table-card {
+  padding: 14px;
+  overflow: hidden;
+}
+
+.table-card h2 {
+  margin-bottom: 10px;
+}
+
+.mini-table {
+  max-height: 320px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+dialog {
+  width: min(860px, calc(100vw - 32px));
+  border: 0;
+  border-radius: 8px;
+  padding: 0;
+  box-shadow: 0 24px 80px rgba(16, 24, 40, 0.28);
+}
+
+dialog::backdrop {
+  background: rgba(16, 24, 40, 0.45);
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+#modalContent {
+  padding: 18px;
+}
+
+.raw-block {
+  margin-top: 12px;
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  white-space: pre-wrap;
+  font-family: Consolas, monospace;
+  font-size: 12px;
+}
+
+@media (max-width: 980px) {
+  .summary-grid,
+  .tables-grid,
+  .toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    align-items: start;
+    flex-direction: column;
+  }
+}
