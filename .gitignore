@@ -8,3 +8,6 @@ Thumbs.db
 
 # Root-level source PDFs are local working copies. Canonical raw inputs live in data/raw/.
 /可轉換公司債市場相關資訊週評*.pdf
+
+# Keep previously tracked raw PDFs, but do not add every local archive PDF by accident.
+/data/raw/*.pdf

@@ -595,7 +595,22 @@ def write_outputs(data: dict[str, Any]) -> None:
         for index, row in enumerate(data["watchlist"], 1):
             writer.writerow({"rank": index, **{key: row.get(key, "") for key in writer.fieldnames if key != "rank"}})
 
-    data_js = "window.CB_WEEKLY_DATA = " + json.dumps(data, ensure_ascii=False, indent=2) + ";\n"
+    history_items = []
+    for history_path in sorted(HISTORY_DIR.glob("*.json")):
+        try:
+            history_data = json.loads(history_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        history_items.append(history_data)
+    history_items.sort(key=lambda item: item.get("report_period", {}).get("start", ""))
+
+    data_js = (
+        "window.CB_WEEKLY_DATA = "
+        + json.dumps(data, ensure_ascii=False, indent=2)
+        + ";\nwindow.CB_WEEKLY_HISTORY = "
+        + json.dumps(history_items, ensure_ascii=False, indent=2)
+        + ";\n"
+    )
     (DIST_DIR / "data.js").write_text(data_js, encoding="utf-8")
 
 

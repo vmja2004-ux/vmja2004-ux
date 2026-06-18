@@ -4,7 +4,7 @@
     "end": "2026-06-12"
   },
   "source_file": "data/raw/可轉換公司債市場相關資訊週評(20260608-0612).pdf",
-  "generated_at": "2026-06-17T22:47:50.258565+00:00",
+  "generated_at": "2026-06-18T12:06:22.483864+00:00",
   "tables": {
     "high_volume": [
       {
@@ -1236,13 +1236,7 @@
       }
     ]
   },
-  "warnings": [
-    {
-      "level": "info",
-      "table": "source_file",
-      "message": "data/raw 原本沒有 PDF，已使用專案根目錄最新 PDF 並複製到 data/raw。"
-    }
-  ],
+  "warnings": [],
   "watchlist": [
     {
       "code": "34913",

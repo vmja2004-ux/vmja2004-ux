@@ -12,13 +12,47 @@
         <p class="eyebrow">Yuanta CB Weekly</p>
         <h1>可轉債市場資訊週評儀表板</h1>
       </div>
-      <div class="period" id="period"></div>
+      <div class="period">
+        <label for="periodFilter">資料週期</label>
+        <select id="periodFilter"></select>
+      </div>
     </header>
 
     <main>
       <section class="summary-grid" id="summary"></section>
 
       <section class="warnings" id="warnings"></section>
+
+      <section class="chart-grid">
+        <article class="chart-card">
+          <div class="panel-heading compact">
+            <h2>核心訊號概況</h2>
+            <span>表格筆數</span>
+          </div>
+          <div id="signalChart" class="chart"></div>
+        </article>
+        <article class="chart-card">
+          <div class="panel-heading compact">
+            <h2>前十名追蹤分數</h2>
+            <span>分數排行</span>
+          </div>
+          <div id="scoreChart" class="chart"></div>
+        </article>
+        <article class="chart-card">
+          <div class="panel-heading compact">
+            <h2>轉換強度</h2>
+            <span>本週轉換量與強度</span>
+          </div>
+          <div id="conversionChart" class="chart"></div>
+        </article>
+        <article class="chart-card">
+          <div class="panel-heading compact">
+            <h2>週期趨勢</h2>
+            <span>歷史資料</span>
+          </div>
+          <div id="trendChart" class="chart"></div>
+        </article>
+      </section>
 
       <section class="toolbar" aria-label="watchlist controls">
         <input id="search" type="search" placeholder="搜尋代碼或名稱" />

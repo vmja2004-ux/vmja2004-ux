@@ -4,7 +4,7 @@ window.CB_WEEKLY_DATA = {
     "end": "2026-06-12"
   },
   "source_file": "data/raw/可轉換公司債市場相關資訊週評(20260608-0612).pdf",
-  "generated_at": "2026-06-17T22:47:50.258565+00:00",
+  "generated_at": "2026-06-18T12:06:22.483864+00:00",
   "tables": {
     "high_volume": [
       {
@@ -1236,13 +1236,7 @@ window.CB_WEEKLY_DATA = {
       }
     ]
   },
-  "warnings": [
-    {
-      "level": "info",
-      "table": "source_file",
-      "message": "data/raw 原本沒有 PDF，已使用專案根目錄最新 PDF 並複製到 data/raw。"
-    }
-  ],
+  "warnings": [],
   "watchlist": [
     {
       "code": "34913",
@@ -3699,3 +3693,3700 @@ window.CB_WEEKLY_DATA = {
     "interpretation_zh": "本週高轉換量標的有 27 檔，新掛牌 5 檔，高成交量 18 檔。追蹤順序以轉換量與新掛牌為主，賣回、贖回與到期風險會降低一般交易優先度。"
   }
 };
+window.CB_WEEKLY_HISTORY = [
+  {
+    "report_period": {
+      "start": "2026-06-08",
+      "end": "2026-06-12"
+    },
+    "source_file": "data/raw/可轉換公司債市場相關資訊週評(20260608-0612).pdf",
+    "generated_at": "2026-06-18T12:06:22.483864+00:00",
+    "tables": {
+      "high_volume": [
+        {
+          "rank": 1,
+          "code": "65462",
+          "name": "正基二",
+          "weekly_volume": 3736,
+          "avg_daily_volume": 747.2
+        },
+        {
+          "rank": 2,
+          "code": "34913",
+          "name": "昇達科三",
+          "weekly_volume": 3706,
+          "avg_daily_volume": 741.2
+        },
+        {
+          "rank": 3,
+          "code": "17172",
+          "name": "長興二",
+          "weekly_volume": 3464,
+          "avg_daily_volume": 692.8
+        },
+        {
+          "rank": 4,
+          "code": "37023",
+          "name": "大聯大三",
+          "weekly_volume": 2879,
+          "avg_daily_volume": 575.8
+        },
+        {
+          "rank": 5,
+          "code": "47491",
+          "name": "新應材一",
+          "weekly_volume": 2546,
+          "avg_daily_volume": 509.2
+        },
+        {
+          "rank": 6,
+          "code": "68901",
+          "name": "來億一KY",
+          "weekly_volume": 2249,
+          "avg_daily_volume": 449.8
+        },
+        {
+          "rank": 7,
+          "code": "37022",
+          "name": "大聯大二",
+          "weekly_volume": 2055,
+          "avg_daily_volume": 411.0
+        },
+        {
+          "rank": 8,
+          "code": "62745",
+          "name": "台燿五",
+          "weekly_volume": 1956,
+          "avg_daily_volume": 391.2
+        },
+        {
+          "rank": 9,
+          "code": "82993",
+          "name": "群聯三",
+          "weekly_volume": 1743,
+          "avg_daily_volume": 348.6
+        },
+        {
+          "rank": 10,
+          "code": "62822",
+          "name": "康舒二",
+          "weekly_volume": 1407,
+          "avg_daily_volume": 281.4
+        },
+        {
+          "rank": 11,
+          "code": "47224",
+          "name": "國精化四",
+          "weekly_volume": 1386,
+          "avg_daily_volume": 277.2
+        },
+        {
+          "rank": 12,
+          "code": "64145",
+          "name": "樺漢五",
+          "weekly_volume": 1323,
+          "avg_daily_volume": 264.6
+        },
+        {
+          "rank": 13,
+          "code": "23683",
+          "name": "金像電三",
+          "weekly_volume": 1186,
+          "avg_daily_volume": 237.2
+        },
+        {
+          "rank": 14,
+          "code": "811210",
+          "name": "至上十",
+          "weekly_volume": 1131,
+          "avg_daily_volume": 226.2
+        },
+        {
+          "rank": 15,
+          "code": "30454",
+          "name": "台灣大四",
+          "weekly_volume": 1086,
+          "avg_daily_volume": 217.2
+        },
+        {
+          "rank": 16,
+          "code": "36806",
+          "name": "家登六",
+          "weekly_volume": 1039,
+          "avg_daily_volume": 207.8
+        },
+        {
+          "rank": 17,
+          "code": "23291",
+          "name": "華泰一",
+          "weekly_volume": 1034,
+          "avg_daily_volume": 206.8
+        },
+        {
+          "rank": 18,
+          "code": "33621",
+          "name": "先進光一",
+          "weekly_volume": 1009,
+          "avg_daily_volume": 201.8
+        }
+      ],
+      "top_gainers": [
+        {
+          "rank": 1,
+          "code": "80426",
+          "name": "金山電六",
+          "close_price": 288.0,
+          "change_pct": 27.43
+        },
+        {
+          "rank": 2,
+          "code": "45421",
+          "name": "科嶠一",
+          "close_price": 397.0,
+          "change_pct": 19.58
+        },
+        {
+          "rank": 3,
+          "code": "80212",
+          "name": "尖點二",
+          "close_price": 260.0,
+          "change_pct": 17.12
+        },
+        {
+          "rank": 4,
+          "code": "65852",
+          "name": "鼎基二",
+          "close_price": 123.0,
+          "change_pct": 12.69
+        },
+        {
+          "rank": 5,
+          "code": "84762",
+          "name": "台境二",
+          "close_price": 100.15,
+          "change_pct": 11.28
+        },
+        {
+          "rank": 6,
+          "code": "65152",
+          "name": "穎崴二",
+          "close_price": 267.0,
+          "change_pct": 11.25
+        },
+        {
+          "rank": 7,
+          "code": "84221",
+          "name": "可寧衛一",
+          "close_price": 209.0,
+          "change_pct": 10.0
+        },
+        {
+          "rank": 8,
+          "code": "64724",
+          "name": "保瑞四",
+          "close_price": 104.05,
+          "change_pct": 9.01
+        },
+        {
+          "rank": 9,
+          "code": "64725",
+          "name": "保瑞五",
+          "close_price": 105.0,
+          "change_pct": 8.92
+        },
+        {
+          "rank": 10,
+          "code": "65851",
+          "name": "鼎基一",
+          "close_price": 125.5,
+          "change_pct": 8.19
+        }
+      ],
+      "top_losers": [
+        {
+          "rank": 1,
+          "code": "49793",
+          "name": "華星光三",
+          "close_price": 260.0,
+          "change_pct": -21.92
+        },
+        {
+          "rank": 2,
+          "code": "64512",
+          "name": "訊芯二KY",
+          "close_price": 223.0,
+          "change_pct": -19.78
+        },
+        {
+          "rank": 3,
+          "code": "68301",
+          "name": "汎銓一",
+          "close_price": 341.0,
+          "change_pct": -19.0
+        },
+        {
+          "rank": 4,
+          "code": "47223",
+          "name": "國精化三",
+          "close_price": 158.0,
+          "change_pct": -18.13
+        },
+        {
+          "rank": 5,
+          "code": "80273",
+          "name": "鈦昇三",
+          "close_price": 414.0,
+          "change_pct": -17.2
+        },
+        {
+          "rank": 6,
+          "code": "35266",
+          "name": "凡甲六",
+          "close_price": 170.0,
+          "change_pct": -17.07
+        },
+        {
+          "rank": 7,
+          "code": "24553",
+          "name": "全新三",
+          "close_price": 231.0,
+          "change_pct": -16.91
+        },
+        {
+          "rank": 8,
+          "code": "370201",
+          "name": "大聯大E1",
+          "close_price": 146.1,
+          "change_pct": -16.51
+        },
+        {
+          "rank": 9,
+          "code": "24552",
+          "name": "全新二",
+          "close_price": 214.0,
+          "change_pct": -16.41
+        },
+        {
+          "rank": 10,
+          "code": "65841",
+          "name": "南俊國際一",
+          "close_price": 329.0,
+          "change_pct": -15.64
+        }
+      ],
+      "sellback_large": [
+        {
+          "code": "61255",
+          "name": "廣運五",
+          "current_outstanding": 3286,
+          "previous_outstanding": 5557,
+          "weekly_sellback_volume": -2271,
+          "remaining_ratio_pct": 54.76
+        },
+        {
+          "code": "41903",
+          "name": "佐登三KY",
+          "current_outstanding": 4781,
+          "previous_outstanding": 6098,
+          "weekly_sellback_volume": -1317,
+          "remaining_ratio_pct": 68.3
+        }
+      ],
+      "new_listings": [
+        {
+          "underwriting_method": "競拍",
+          "code": "34913",
+          "name": "昇達科三",
+          "tcri_or_guarantor": "5",
+          "issue_amount_100m": 12.0,
+          "conversion_price": 1788.0,
+          "listing_date": "2026-06-09",
+          "issue_price_pct": 144.93,
+          "decomposition_date": "2026-06-16"
+        },
+        {
+          "underwriting_method": "競拍",
+          "code": "622010",
+          "name": "岳豐十",
+          "tcri_or_guarantor": "華南銀",
+          "issue_amount_100m": 5.0,
+          "conversion_price": 33.0,
+          "listing_date": "2026-06-10",
+          "issue_price_pct": 112.14,
+          "decomposition_date": "2026-06-17"
+        },
+        {
+          "underwriting_method": "詢圈",
+          "code": "62236",
+          "name": "旺矽六",
+          "tcri_or_guarantor": "4",
+          "issue_amount_100m": 50.0,
+          "conversion_price": 6223.0,
+          "listing_date": "2026-06-15",
+          "issue_price_pct": 100.5,
+          "decomposition_date": "2026-06-23"
+        },
+        {
+          "underwriting_method": "競拍",
+          "code": "32943",
+          "name": "英濟三",
+          "tcri_or_guarantor": "國泰世華銀",
+          "issue_amount_100m": 3.0,
+          "conversion_price": 41.8,
+          "listing_date": "2026-06-18",
+          "issue_price_pct": 117.71,
+          "decomposition_date": "2026-06-26"
+        },
+        {
+          "underwriting_method": "詢圈",
+          "code": "811211",
+          "name": "至上十一",
+          "tcri_or_guarantor": "6",
+          "issue_amount_100m": 20.0,
+          "conversion_price": 95.3,
+          "listing_date": "2026-06-23",
+          "issue_price_pct": 100.2,
+          "decomposition_date": "2026-06-30"
+        }
+      ],
+      "conversion_large": [
+        {
+          "code": "35832",
+          "name": "辛耘二",
+          "current_outstanding": 2051,
+          "previous_outstanding": 9967,
+          "weekly_conversion_volume": 7916,
+          "remaining_ratio_pct": 20.51,
+          "conversion_intensity_pct": 79.42,
+          "conversion_flag": "後段壓力"
+        },
+        {
+          "code": "62745",
+          "name": "台燿五",
+          "current_outstanding": 4222,
+          "previous_outstanding": 9989,
+          "weekly_conversion_volume": 5767,
+          "remaining_ratio_pct": 10.55,
+          "conversion_intensity_pct": 57.73,
+          "conversion_flag": "後段壓力"
+        },
+        {
+          "code": "24866",
+          "name": "一詮六",
+          "current_outstanding": 1230,
+          "previous_outstanding": 2906,
+          "weekly_conversion_volume": 1676,
+          "remaining_ratio_pct": 20.5,
+          "conversion_intensity_pct": 57.67,
+          "conversion_flag": "後段壓力"
+        },
+        {
+          "code": "64423",
+          "name": "光聖三",
+          "current_outstanding": 709,
+          "previous_outstanding": 2193,
+          "weekly_conversion_volume": 1484,
+          "remaining_ratio_pct": 4.72,
+          "conversion_intensity_pct": 67.67,
+          "conversion_flag": "後段壓力"
+        },
+        {
+          "code": "35831",
+          "name": "辛耘一",
+          "current_outstanding": 576,
+          "previous_outstanding": 1971,
+          "weekly_conversion_volume": 1395,
+          "remaining_ratio_pct": 28.8,
+          "conversion_intensity_pct": 70.78,
+          "conversion_flag": "後段壓力"
+        },
+        {
+          "code": "30337",
+          "name": "威健七",
+          "current_outstanding": 17933,
+          "previous_outstanding": 19318,
+          "weekly_conversion_volume": 1385,
+          "remaining_ratio_pct": 71.73,
+          "conversion_intensity_pct": 7.17,
+          "conversion_flag": "一般"
+        },
+        {
+          "code": "68901",
+          "name": "來億一KY",
+          "current_outstanding": 43839,
+          "previous_outstanding": 45000,
+          "weekly_conversion_volume": 1161,
+          "remaining_ratio_pct": 97.42,
+          "conversion_intensity_pct": 2.58,
+          "conversion_flag": "一般"
+        },
+        {
+          "code": "37023",
+          "name": "大聯大三",
+          "current_outstanding": 13068,
+          "previous_outstanding": 14092,
+          "weekly_conversion_volume": 1024,
+          "remaining_ratio_pct": 65.34,
+          "conversion_intensity_pct": 7.27,
+          "conversion_flag": "一般"
+        },
+        {
+          "code": "62075",
+          "name": "雷科五",
+          "current_outstanding": 1575,
+          "previous_outstanding": 2434,
+          "weekly_conversion_volume": 859,
+          "remaining_ratio_pct": 26.25,
+          "conversion_intensity_pct": 35.29,
+          "conversion_flag": "後段壓力"
+        },
+        {
+          "code": "32608",
+          "name": "威剛八",
+          "current_outstanding": 3414,
+          "previous_outstanding": 4227,
+          "weekly_conversion_volume": 813,
+          "remaining_ratio_pct": 17.07,
+          "conversion_intensity_pct": 19.23,
+          "conversion_flag": "觀察"
+        },
+        {
+          "code": "24642",
+          "name": "盟立二",
+          "current_outstanding": 4164,
+          "previous_outstanding": 4935,
+          "weekly_conversion_volume": 771,
+          "remaining_ratio_pct": 41.64,
+          "conversion_intensity_pct": 15.62,
+          "conversion_flag": "觀察"
+        },
+        {
+          "code": "49674",
+          "name": "十銓四",
+          "current_outstanding": 4304,
+          "previous_outstanding": 4991,
+          "weekly_conversion_volume": 687,
+          "remaining_ratio_pct": 21.52,
+          "conversion_intensity_pct": 13.76,
+          "conversion_flag": "觀察"
+        },
+        {
+          "code": "68301",
+          "name": "汎銓一",
+          "current_outstanding": 1866,
+          "previous_outstanding": 2538,
+          "weekly_conversion_volume": 672,
+          "remaining_ratio_pct": 37.32,
+          "conversion_intensity_pct": 26.48,
+          "conversion_flag": "警示"
+        },
+        {
+          "code": "65152",
+          "name": "穎崴二",
+          "current_outstanding": 16692,
+          "previous_outstanding": 17311,
+          "weekly_conversion_volume": 619,
+          "remaining_ratio_pct": 55.64,
+          "conversion_intensity_pct": 3.58,
+          "conversion_flag": "一般"
+        },
+        {
+          "code": "45421",
+          "name": "科嶠一",
+          "current_outstanding": 523,
+          "previous_outstanding": 1023,
+          "weekly_conversion_volume": 500,
+          "remaining_ratio_pct": 17.43,
+          "conversion_intensity_pct": 48.88,
+          "conversion_flag": "後段壓力"
+        },
+        {
+          "code": "61973",
+          "name": "佳必琪三",
+          "current_outstanding": 7943,
+          "previous_outstanding": 8403,
+          "weekly_conversion_volume": 460,
+          "remaining_ratio_pct": 79.43,
+          "conversion_intensity_pct": 5.47,
+          "conversion_flag": "一般"
+        },
+        {
+          "code": "68902",
+          "name": "來億二KY",
+          "current_outstanding": 4548,
+          "previous_outstanding": 5000,
+          "weekly_conversion_volume": 452,
+          "remaining_ratio_pct": 90.96,
+          "conversion_intensity_pct": 9.04,
+          "conversion_flag": "一般"
+        },
+        {
+          "code": "64324",
+          "name": "今展科四",
+          "current_outstanding": 1602,
+          "previous_outstanding": 2029,
+          "weekly_conversion_volume": 427,
+          "remaining_ratio_pct": 64.08,
+          "conversion_intensity_pct": 21.04,
+          "conversion_flag": "警示"
+        },
+        {
+          "code": "61907",
+          "name": "萬泰科七",
+          "current_outstanding": 6851,
+          "previous_outstanding": 7221,
+          "weekly_conversion_volume": 370,
+          "remaining_ratio_pct": 68.51,
+          "conversion_intensity_pct": 5.12,
+          "conversion_flag": "一般"
+        },
+        {
+          "code": "80212",
+          "name": "尖點二",
+          "current_outstanding": 3257,
+          "previous_outstanding": 3513,
+          "weekly_conversion_volume": 256,
+          "remaining_ratio_pct": 46.52,
+          "conversion_intensity_pct": 7.29,
+          "conversion_flag": "一般"
+        },
+        {
+          "code": "24361",
+          "name": "偉詮電一",
+          "current_outstanding": 8734,
+          "previous_outstanding": 8985,
+          "weekly_conversion_volume": 251,
+          "remaining_ratio_pct": 79.4,
+          "conversion_intensity_pct": 2.79,
+          "conversion_flag": "一般"
+        },
+        {
+          "code": "64512",
+          "name": "訊芯二KY",
+          "current_outstanding": 10029,
+          "previous_outstanding": 10254,
+          "weekly_conversion_volume": 225,
+          "remaining_ratio_pct": 40.11,
+          "conversion_intensity_pct": 2.19,
+          "conversion_flag": "一般"
+        },
+        {
+          "code": "80273",
+          "name": "鈦昇三",
+          "current_outstanding": 1109,
+          "previous_outstanding": 1316,
+          "weekly_conversion_volume": 207,
+          "remaining_ratio_pct": 11.09,
+          "conversion_intensity_pct": 15.73,
+          "conversion_flag": "觀察"
+        },
+        {
+          "code": "68701",
+          "name": "騰雲一",
+          "current_outstanding": 3207,
+          "previous_outstanding": 3385,
+          "weekly_conversion_volume": 178,
+          "remaining_ratio_pct": 91.62,
+          "conversion_intensity_pct": 5.26,
+          "conversion_flag": "一般"
+        },
+        {
+          "code": "30371",
+          "name": "欣興一",
+          "current_outstanding": 14550,
+          "previous_outstanding": 14695,
+          "weekly_conversion_volume": 145,
+          "remaining_ratio_pct": 36.37,
+          "conversion_intensity_pct": 0.99,
+          "conversion_flag": "一般"
+        },
+        {
+          "code": "68702",
+          "name": "騰雲二",
+          "current_outstanding": 3245,
+          "previous_outstanding": 3384,
+          "weekly_conversion_volume": 139,
+          "remaining_ratio_pct": 92.71,
+          "conversion_intensity_pct": 4.11,
+          "conversion_flag": "一般"
+        },
+        {
+          "code": "23511",
+          "name": "順德一",
+          "current_outstanding": 3885,
+          "previous_outstanding": 4021,
+          "weekly_conversion_volume": 136,
+          "remaining_ratio_pct": 32.37,
+          "conversion_intensity_pct": 3.38,
+          "conversion_flag": "一般"
+        }
+      ],
+      "auction_cases": [
+        {
+          "bid_open_date": "2026-05-29",
+          "name": "昇達科三",
+          "code": "34913",
+          "tcri_or_guarantor": "5",
+          "bid_start_date": "2026-05-25",
+          "bid_end_date": "2026-05-27",
+          "auction_quantity": 10200,
+          "minimum_bid_price": 102.0,
+          "listing_date": "2026-06-09",
+          "lead_underwriter": "凱基",
+          "conversion_price": 1788.0,
+          "issue_price_pct": 144.93
+        },
+        {
+          "bid_open_date": "2026-06-01",
+          "name": "岳豐十",
+          "code": "622010",
+          "tcri_or_guarantor": "華南銀",
+          "bid_start_date": "2026-05-26",
+          "bid_end_date": "2026-05-28",
+          "auction_quantity": 4250,
+          "minimum_bid_price": 102.0,
+          "listing_date": "2026-06-10",
+          "lead_underwriter": "凱基",
+          "conversion_price": 33.0,
+          "issue_price_pct": 112.14
+        },
+        {
+          "bid_open_date": "2026-06-09",
+          "name": "英濟三",
+          "code": "32943",
+          "tcri_or_guarantor": "國泰世華銀",
+          "bid_start_date": "2026-06-03",
+          "bid_end_date": "2026-06-05",
+          "auction_quantity": 2550,
+          "minimum_bid_price": 100.0,
+          "listing_date": "2026-06-18",
+          "lead_underwriter": "台新",
+          "conversion_price": 41.8,
+          "issue_price_pct": 117.71
+        },
+        {
+          "bid_open_date": "2026-06-18",
+          "name": "佐登四KY",
+          "code": "41904",
+          "tcri_or_guarantor": "土銀",
+          "bid_start_date": "2026-06-12",
+          "bid_end_date": "2026-06-16",
+          "auction_quantity": 4750,
+          "minimum_bid_price": 100.0,
+          "listing_date": "2026-06-30",
+          "lead_underwriter": "華南永昌",
+          "conversion_price": 26.6,
+          "issue_price_pct": "未開標"
+        },
+        {
+          "bid_open_date": "2026-06-18",
+          "name": "正基三",
+          "code": "65463",
+          "tcri_or_guarantor": "6",
+          "bid_start_date": "2026-06-12",
+          "bid_end_date": "2026-06-16",
+          "auction_quantity": 1760,
+          "minimum_bid_price": 105.0,
+          "listing_date": "2026-06-30",
+          "lead_underwriter": "凱基",
+          "conversion_price": 81.5,
+          "issue_price_pct": "未開標"
+        },
+        {
+          "bid_open_date": "2026-06-22",
+          "name": "宜鼎二",
+          "code": "52892",
+          "tcri_or_guarantor": "3",
+          "bid_start_date": "2026-06-15",
+          "bid_end_date": "2026-06-17",
+          "auction_quantity": 26555,
+          "minimum_bid_price": 102.0,
+          "listing_date": "2026-07-01",
+          "lead_underwriter": "凱基",
+          "conversion_price": 2180.0,
+          "issue_price_pct": "未開標"
+        },
+        {
+          "bid_open_date": "2026-06-23",
+          "name": "萬潤六",
+          "code": "61876",
+          "tcri_or_guarantor": "5",
+          "bid_start_date": "2026-06-16",
+          "bid_end_date": "2026-06-18",
+          "auction_quantity": 25500,
+          "minimum_bid_price": 102.0,
+          "listing_date": "2026-07-02",
+          "lead_underwriter": "元大",
+          "conversion_price": 1150.0,
+          "issue_price_pct": "未開標"
+        }
+      ],
+      "company_calls": [
+        {
+          "code": "64423",
+          "name": "光聖三",
+          "original_issue_volume": 15000,
+          "current_outstanding": 709,
+          "remaining_ratio_pct": 4.72,
+          "termination_date": "2026-06-24"
+        },
+        {
+          "code": "31351",
+          "name": "凌航一",
+          "original_issue_volume": 10000,
+          "current_outstanding": 10,
+          "remaining_ratio_pct": 0.1,
+          "termination_date": "2026-06-25"
+        },
+        {
+          "code": "62745",
+          "name": "台燿五",
+          "original_issue_volume": 40000,
+          "current_outstanding": 4222,
+          "remaining_ratio_pct": 10.55,
+          "termination_date": "2026-06-29"
+        },
+        {
+          "code": "35831",
+          "name": "辛耘一",
+          "original_issue_volume": 2000,
+          "current_outstanding": 576,
+          "remaining_ratio_pct": 28.8,
+          "termination_date": "2026-07-08"
+        },
+        {
+          "code": "35832",
+          "name": "辛耘二",
+          "original_issue_volume": 10000,
+          "current_outstanding": 2051,
+          "remaining_ratio_pct": 20.51,
+          "termination_date": "2026-07-08"
+        },
+        {
+          "code": "32608",
+          "name": "威剛八",
+          "original_issue_volume": 20000,
+          "current_outstanding": 3414,
+          "remaining_ratio_pct": 17.07,
+          "termination_date": "2026-07-10"
+        },
+        {
+          "code": "62756",
+          "name": "元山六",
+          "original_issue_volume": 3000,
+          "current_outstanding": 3,
+          "remaining_ratio_pct": 0.1,
+          "termination_date": "2026-07-15"
+        },
+        {
+          "code": "49674",
+          "name": "十銓四",
+          "original_issue_volume": 20000,
+          "current_outstanding": 4304,
+          "remaining_ratio_pct": 21.52,
+          "termination_date": "2026-07-20"
+        },
+        {
+          "code": "24866",
+          "name": "一詮六",
+          "original_issue_volume": 6000,
+          "current_outstanding": 1230,
+          "remaining_ratio_pct": 20.5,
+          "termination_date": "2026-07-20"
+        },
+        {
+          "code": "37022",
+          "name": "大聯大二",
+          "original_issue_volume": 35000,
+          "current_outstanding": 26789,
+          "remaining_ratio_pct": 76.54,
+          "termination_date": "2026-07-27"
+        },
+        {
+          "code": "37023",
+          "name": "大聯大三",
+          "original_issue_volume": 20000,
+          "current_outstanding": 13068,
+          "remaining_ratio_pct": 65.34,
+          "termination_date": "2026-07-27"
+        },
+        {
+          "code": "65841",
+          "name": "南俊一",
+          "original_issue_volume": 7000,
+          "current_outstanding": 410,
+          "remaining_ratio_pct": 5.85,
+          "termination_date": "2026-08-10"
+        },
+        {
+          "code": "65842",
+          "name": "南俊二",
+          "original_issue_volume": 3000,
+          "current_outstanding": 16,
+          "remaining_ratio_pct": 0.53,
+          "termination_date": "2026-08-10"
+        }
+      ],
+      "putback_within_3m": [
+        {
+          "code": "61255",
+          "name": "廣運五",
+          "putback_date": "2026-06-21",
+          "original_issue_volume": 6000,
+          "current_outstanding": 3286,
+          "remaining_ratio_pct": 54.76
+        },
+        {
+          "code": "24866",
+          "name": "一詮六",
+          "putback_date": "2026-07-01",
+          "original_issue_volume": 6000,
+          "current_outstanding": 1230,
+          "remaining_ratio_pct": 20.5
+        },
+        {
+          "code": "65096",
+          "name": "聚和六",
+          "putback_date": "2026-07-03",
+          "original_issue_volume": 5000,
+          "current_outstanding": 4798,
+          "remaining_ratio_pct": 95.96
+        },
+        {
+          "code": "41903",
+          "name": "佐登三KY",
+          "putback_date": "2026-07-11",
+          "original_issue_volume": 7000,
+          "current_outstanding": 4781,
+          "remaining_ratio_pct": 68.3
+        },
+        {
+          "code": "80273",
+          "name": "鈦昇三",
+          "putback_date": "2026-07-13",
+          "original_issue_volume": 10000,
+          "current_outstanding": 1109,
+          "remaining_ratio_pct": 11.09
+        },
+        {
+          "code": "45721",
+          "name": "駐龍一",
+          "putback_date": "2026-07-16",
+          "original_issue_volume": 5000,
+          "current_outstanding": 5000,
+          "remaining_ratio_pct": 100.0
+        },
+        {
+          "code": "15364",
+          "name": "和大四",
+          "putback_date": "2026-08-12",
+          "original_issue_volume": 15000,
+          "current_outstanding": 15000,
+          "remaining_ratio_pct": 100.0
+        },
+        {
+          "code": "41372",
+          "name": "麗豐二KY",
+          "putback_date": "2026-08-12",
+          "original_issue_volume": 11000,
+          "current_outstanding": 11000,
+          "remaining_ratio_pct": 100.0
+        },
+        {
+          "code": "68301",
+          "name": "汎銓一",
+          "putback_date": "2026-08-15",
+          "original_issue_volume": 5000,
+          "current_outstanding": 1866,
+          "remaining_ratio_pct": 37.32
+        },
+        {
+          "code": "80914",
+          "name": "翔名四",
+          "putback_date": "2026-08-15",
+          "original_issue_volume": 5500,
+          "current_outstanding": 2887,
+          "remaining_ratio_pct": 52.49
+        },
+        {
+          "code": "64324",
+          "name": "今展科四",
+          "putback_date": "2026-08-16",
+          "original_issue_volume": 2500,
+          "current_outstanding": 1602,
+          "remaining_ratio_pct": 64.08
+        },
+        {
+          "code": "89278",
+          "name": "北基八",
+          "putback_date": "2026-08-21",
+          "original_issue_volume": 5000,
+          "current_outstanding": 4998,
+          "remaining_ratio_pct": 99.96
+        },
+        {
+          "code": "14363",
+          "name": "華友聯三",
+          "putback_date": "2026-08-27",
+          "original_issue_volume": 6000,
+          "current_outstanding": 5990,
+          "remaining_ratio_pct": 99.83
+        },
+        {
+          "code": "61794",
+          "name": "亞通四",
+          "putback_date": "2026-08-28",
+          "original_issue_volume": 6000,
+          "current_outstanding": 5954,
+          "remaining_ratio_pct": 99.23
+        },
+        {
+          "code": "44163",
+          "name": "三圓三",
+          "putback_date": "2026-09-30",
+          "original_issue_volume": 10000,
+          "current_outstanding": 9559,
+          "remaining_ratio_pct": 95.59
+        }
+      ],
+      "maturity_within_3m": [
+        {
+          "code": "35871",
+          "name": "閎康一",
+          "maturity_date": "2026-06-20",
+          "original_issue_volume": 6000,
+          "current_outstanding": 196,
+          "conversion_stop_start": "2026-04-20",
+          "conversion_stop_end": "2026-06-18",
+          "remaining_ratio_pct": 3.26
+        },
+        {
+          "code": "56086",
+          "name": "四維航六",
+          "maturity_date": "2026-06-21",
+          "original_issue_volume": 5000,
+          "current_outstanding": 4998,
+          "conversion_stop_start": "2025-04-27",
+          "conversion_stop_end": "2025-06-25",
+          "remaining_ratio_pct": 99.96
+        },
+        {
+          "code": "54342",
+          "name": "崇越二",
+          "maturity_date": "2026-06-29",
+          "original_issue_volume": 10000,
+          "current_outstanding": 118,
+          "conversion_stop_start": "2026-03-28",
+          "conversion_stop_end": "2026-05-26",
+          "remaining_ratio_pct": 1.18
+        },
+        {
+          "code": "31282",
+          "name": "昇銳二",
+          "maturity_date": "2026-07-03",
+          "original_issue_volume": 3000,
+          "current_outstanding": 1083,
+          "conversion_stop_start": "2025-08-05",
+          "conversion_stop_end": "2025-08-30",
+          "remaining_ratio_pct": 36.1
+        },
+        {
+          "code": "30922",
+          "name": "鴻碩二",
+          "maturity_date": "2026-07-04",
+          "original_issue_volume": 2500,
+          "current_outstanding": 428,
+          "conversion_stop_start": "2026-03-29",
+          "conversion_stop_end": "2026-05-27",
+          "remaining_ratio_pct": 17.12
+        },
+        {
+          "code": "52303",
+          "name": "雷笛克光學三",
+          "maturity_date": "2026-07-24",
+          "original_issue_volume": 3000,
+          "current_outstanding": 596,
+          "conversion_stop_start": "2026-06-04",
+          "conversion_stop_end": "2026-06-30",
+          "remaining_ratio_pct": 19.86
+        },
+        {
+          "code": "61793",
+          "name": "亞通三",
+          "maturity_date": "2026-07-25",
+          "original_issue_volume": 3000,
+          "current_outstanding": 473,
+          "conversion_stop_start": "2026-03-31",
+          "conversion_stop_end": "2026-05-29",
+          "remaining_ratio_pct": 15.76
+        },
+        {
+          "code": "84662",
+          "name": "美吉吉二KY",
+          "maturity_date": "2026-07-26",
+          "original_issue_volume": 5000,
+          "current_outstanding": 252,
+          "conversion_stop_start": "2026-04-25",
+          "conversion_stop_end": "2026-06-23",
+          "remaining_ratio_pct": 5.04
+        },
+        {
+          "code": "61827",
+          "name": "合晶七",
+          "maturity_date": "2026-07-27",
+          "original_issue_volume": 3000,
+          "current_outstanding": 2976,
+          "conversion_stop_start": "2026-03-26",
+          "conversion_stop_end": "2026-06-18",
+          "remaining_ratio_pct": 99.2
+        },
+        {
+          "code": "20662",
+          "name": "世德二",
+          "maturity_date": "2026-07-31",
+          "original_issue_volume": 4000,
+          "current_outstanding": 2378,
+          "conversion_stop_start": "2025-10-14",
+          "conversion_stop_end": "2025-11-09",
+          "remaining_ratio_pct": 59.45
+        },
+        {
+          "code": "50097",
+          "name": "榮剛七",
+          "maturity_date": "2026-07-31",
+          "original_issue_volume": 50000,
+          "current_outstanding": 49999,
+          "conversion_stop_start": "2026-06-09",
+          "conversion_stop_end": "2026-07-05",
+          "remaining_ratio_pct": 99.99
+        },
+        {
+          "code": "23383",
+          "name": "光罩三",
+          "maturity_date": "2026-08-03",
+          "original_issue_volume": 20000,
+          "current_outstanding": 979,
+          "conversion_stop_start": "2026-04-20",
+          "conversion_stop_end": "2026-06-18",
+          "remaining_ratio_pct": 4.89
+        },
+        {
+          "code": "64773",
+          "name": "安集三",
+          "maturity_date": "2026-08-04",
+          "original_issue_volume": 5000,
+          "current_outstanding": 1931,
+          "conversion_stop_start": "2025-06-10",
+          "conversion_stop_end": "2025-07-05",
+          "remaining_ratio_pct": 38.62
+        },
+        {
+          "code": "53095",
+          "name": "系統電五",
+          "maturity_date": "2026-08-08",
+          "original_issue_volume": 5000,
+          "current_outstanding": 127,
+          "conversion_stop_start": "2026-05-15",
+          "conversion_stop_end": "2026-06-09",
+          "remaining_ratio_pct": 2.54
+        },
+        {
+          "code": "82551",
+          "name": "朋程一",
+          "maturity_date": "2026-08-09",
+          "original_issue_volume": 8000,
+          "current_outstanding": 7999,
+          "conversion_stop_start": "2026-06-15",
+          "conversion_stop_end": "2026-07-11",
+          "remaining_ratio_pct": 99.98
+        },
+        {
+          "code": "24624",
+          "name": "良得電四",
+          "maturity_date": "2026-08-11",
+          "original_issue_volume": 4000,
+          "current_outstanding": 2443,
+          "conversion_stop_start": "2026-06-12",
+          "conversion_stop_end": "2026-07-08",
+          "remaining_ratio_pct": 61.07
+        },
+        {
+          "code": "64145",
+          "name": "樺漢五",
+          "maturity_date": "2026-08-16",
+          "original_issue_volume": 30000,
+          "current_outstanding": 21450,
+          "conversion_stop_start": "2026-05-28",
+          "conversion_stop_end": "2026-06-22",
+          "remaining_ratio_pct": 71.5
+        },
+        {
+          "code": "67961",
+          "name": "晉弘一",
+          "maturity_date": "2026-08-25",
+          "original_issue_volume": 2000,
+          "current_outstanding": 2000,
+          "conversion_stop_start": "2026-04-25",
+          "conversion_stop_end": "2026-06-23",
+          "remaining_ratio_pct": 100.0
+        },
+        {
+          "code": "30882",
+          "name": "艾訊二",
+          "maturity_date": "2026-08-28",
+          "original_issue_volume": 8000,
+          "current_outstanding": 2030,
+          "conversion_stop_start": "2026-03-29",
+          "conversion_stop_end": "2026-05-27",
+          "remaining_ratio_pct": 25.37
+        },
+        {
+          "code": "15864",
+          "name": "和勤四",
+          "maturity_date": "2026-08-30",
+          "original_issue_volume": 2000,
+          "current_outstanding": 2000,
+          "conversion_stop_start": "2026-06-01",
+          "conversion_stop_end": "2026-06-27",
+          "remaining_ratio_pct": 100.0
+        },
+        {
+          "code": "15865",
+          "name": "和勤五",
+          "maturity_date": "2026-08-31",
+          "original_issue_volume": 3000,
+          "current_outstanding": 2902,
+          "conversion_stop_start": "2026-06-01",
+          "conversion_stop_end": "2026-06-27",
+          "remaining_ratio_pct": 96.73
+        },
+        {
+          "code": "24361",
+          "name": "偉詮電一",
+          "maturity_date": "2026-09-11",
+          "original_issue_volume": 11000,
+          "current_outstanding": 8734,
+          "conversion_stop_start": "2026-06-10",
+          "conversion_stop_end": "2026-07-06",
+          "remaining_ratio_pct": 79.4
+        },
+        {
+          "code": "29061",
+          "name": "高林一",
+          "maturity_date": "2026-09-20",
+          "original_issue_volume": 10000,
+          "current_outstanding": 4600,
+          "conversion_stop_start": "2026-04-19",
+          "conversion_stop_end": "2026-06-17",
+          "remaining_ratio_pct": 46.0
+        },
+        {
+          "code": "37083",
+          "name": "上緯投控三",
+          "maturity_date": "2026-09-27",
+          "original_issue_volume": 10000,
+          "current_outstanding": 2531,
+          "conversion_stop_start": "2026-03-30",
+          "conversion_stop_end": "2026-05-28",
+          "remaining_ratio_pct": 25.31
+        },
+        {
+          "code": "37084",
+          "name": "上緯投控四",
+          "maturity_date": "2026-09-28",
+          "original_issue_volume": 10000,
+          "current_outstanding": 622,
+          "conversion_stop_start": "2026-06-08",
+          "conversion_stop_end": "2026-07-04",
+          "remaining_ratio_pct": 6.22
+        },
+        {
+          "code": "68731",
+          "name": "泓德能源一",
+          "maturity_date": "2026-09-28",
+          "original_issue_volume": 10000,
+          "current_outstanding": 235,
+          "conversion_stop_start": "2026-04-14",
+          "conversion_stop_end": "2026-06-12",
+          "remaining_ratio_pct": 2.35
+        },
+        {
+          "code": "84732",
+          "name": "山林水二",
+          "maturity_date": "2026-09-28",
+          "original_issue_volume": 10000,
+          "current_outstanding": 2439,
+          "conversion_stop_start": "2026-04-17",
+          "conversion_stop_end": "2026-06-15",
+          "remaining_ratio_pct": 24.39
+        },
+        {
+          "code": "62756",
+          "name": "元山六",
+          "maturity_date": "2026-09-30",
+          "original_issue_volume": 3000,
+          "current_outstanding": 3,
+          "conversion_stop_start": "2026-03-30",
+          "conversion_stop_end": "2026-05-28",
+          "remaining_ratio_pct": 0.1
+        }
+      ]
+    },
+    "warnings": [],
+    "watchlist": [
+      {
+        "code": "34913",
+        "name": "昇達科三",
+        "score": 39.9,
+        "signal_type": "新掛牌、競拍、流動性",
+        "risk_level": "低",
+        "trading_interpretation": "近期掛牌，掛牌日 2026-06-09。；近期競拍案件，適合事件型追蹤。；週成交量 3,706 張，日均約 741.2 張。",
+        "risk_warning": "發行價格偏高，掛牌後賣壓需留意。",
+        "suggested_action": "Event-driven only",
+        "raw": {
+          "high_volume": {
+            "rank": 2,
+            "code": "34913",
+            "name": "昇達科三",
+            "weekly_volume": 3706,
+            "avg_daily_volume": 741.2
+          },
+          "new_listings": {
+            "underwriting_method": "競拍",
+            "code": "34913",
+            "name": "昇達科三",
+            "tcri_or_guarantor": "5",
+            "issue_amount_100m": 12.0,
+            "conversion_price": 1788.0,
+            "listing_date": "2026-06-09",
+            "issue_price_pct": 144.93,
+            "decomposition_date": "2026-06-16"
+          },
+          "auction_cases": {
+            "bid_open_date": "2026-05-29",
+            "name": "昇達科三",
+            "code": "34913",
+            "tcri_or_guarantor": "5",
+            "bid_start_date": "2026-05-25",
+            "bid_end_date": "2026-05-27",
+            "auction_quantity": 10200,
+            "minimum_bid_price": 102.0,
+            "listing_date": "2026-06-09",
+            "lead_underwriter": "凱基",
+            "conversion_price": 1788.0,
+            "issue_price_pct": 144.93
+          }
+        }
+      },
+      {
+        "code": "62745",
+        "name": "台燿五",
+        "score": 31.9,
+        "signal_type": "轉換量、流動性、贖回風險",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 5,767 張，轉換強度約 57.73%。；週成交量 1,956 張，日均約 391.2 張。",
+        "risk_warning": "公司執行贖回權，終止掛牌日 2026-06-29，剩餘比率 10.55%。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 8,
+            "code": "62745",
+            "name": "台燿五",
+            "weekly_volume": 1956,
+            "avg_daily_volume": 391.2
+          },
+          "conversion_large": {
+            "code": "62745",
+            "name": "台燿五",
+            "current_outstanding": 4222,
+            "previous_outstanding": 9989,
+            "weekly_conversion_volume": 5767,
+            "remaining_ratio_pct": 10.55,
+            "conversion_intensity_pct": 57.73,
+            "conversion_flag": "後段壓力"
+          },
+          "company_calls": {
+            "code": "62745",
+            "name": "台燿五",
+            "original_issue_volume": 40000,
+            "current_outstanding": 4222,
+            "remaining_ratio_pct": 10.55,
+            "termination_date": "2026-06-29"
+          }
+        }
+      },
+      {
+        "code": "35832",
+        "name": "辛耘二",
+        "score": 30.0,
+        "signal_type": "轉換量、贖回風險",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 7,916 張，轉換強度約 79.42%。",
+        "risk_warning": "公司執行贖回權，終止掛牌日 2026-07-08，剩餘比率 20.51%。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "35832",
+            "name": "辛耘二",
+            "current_outstanding": 2051,
+            "previous_outstanding": 9967,
+            "weekly_conversion_volume": 7916,
+            "remaining_ratio_pct": 20.51,
+            "conversion_intensity_pct": 79.42,
+            "conversion_flag": "後段壓力"
+          },
+          "company_calls": {
+            "code": "35832",
+            "name": "辛耘二",
+            "original_issue_volume": 10000,
+            "current_outstanding": 2051,
+            "remaining_ratio_pct": 20.51,
+            "termination_date": "2026-07-08"
+          }
+        }
+      },
+      {
+        "code": "45421",
+        "name": "科嶠一",
+        "score": 25.4,
+        "signal_type": "轉換量、漲幅",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 500 張，轉換強度約 48.88%。；進入漲幅榜，僅作動能參考。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_gainers": {
+            "rank": 2,
+            "code": "45421",
+            "name": "科嶠一",
+            "close_price": 397.0,
+            "change_pct": 19.58
+          },
+          "conversion_large": {
+            "code": "45421",
+            "name": "科嶠一",
+            "current_outstanding": 523,
+            "previous_outstanding": 1023,
+            "weekly_conversion_volume": 500,
+            "remaining_ratio_pct": 17.43,
+            "conversion_intensity_pct": 48.88,
+            "conversion_flag": "後段壓力"
+          }
+        }
+      },
+      {
+        "code": "622010",
+        "name": "岳豐十",
+        "score": 25.0,
+        "signal_type": "新掛牌、競拍",
+        "risk_level": "中",
+        "trading_interpretation": "近期掛牌，掛牌日 2026-06-10。；近期競拍案件，適合事件型追蹤。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Event-driven only",
+        "raw": {
+          "new_listings": {
+            "underwriting_method": "競拍",
+            "code": "622010",
+            "name": "岳豐十",
+            "tcri_or_guarantor": "華南銀",
+            "issue_amount_100m": 5.0,
+            "conversion_price": 33.0,
+            "listing_date": "2026-06-10",
+            "issue_price_pct": 112.14,
+            "decomposition_date": "2026-06-17"
+          },
+          "auction_cases": {
+            "bid_open_date": "2026-06-01",
+            "name": "岳豐十",
+            "code": "622010",
+            "tcri_or_guarantor": "華南銀",
+            "bid_start_date": "2026-05-26",
+            "bid_end_date": "2026-05-28",
+            "auction_quantity": 4250,
+            "minimum_bid_price": 102.0,
+            "listing_date": "2026-06-10",
+            "lead_underwriter": "凱基",
+            "conversion_price": 33.0,
+            "issue_price_pct": 112.14
+          }
+        }
+      },
+      {
+        "code": "32943",
+        "name": "英濟三",
+        "score": 25.0,
+        "signal_type": "新掛牌、競拍",
+        "risk_level": "中",
+        "trading_interpretation": "近期掛牌，掛牌日 2026-06-18。；近期競拍案件，適合事件型追蹤。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Event-driven only",
+        "raw": {
+          "new_listings": {
+            "underwriting_method": "競拍",
+            "code": "32943",
+            "name": "英濟三",
+            "tcri_or_guarantor": "國泰世華銀",
+            "issue_amount_100m": 3.0,
+            "conversion_price": 41.8,
+            "listing_date": "2026-06-18",
+            "issue_price_pct": 117.71,
+            "decomposition_date": "2026-06-26"
+          },
+          "auction_cases": {
+            "bid_open_date": "2026-06-09",
+            "name": "英濟三",
+            "code": "32943",
+            "tcri_or_guarantor": "國泰世華銀",
+            "bid_start_date": "2026-06-03",
+            "bid_end_date": "2026-06-05",
+            "auction_quantity": 2550,
+            "minimum_bid_price": 100.0,
+            "listing_date": "2026-06-18",
+            "lead_underwriter": "台新",
+            "conversion_price": 41.8,
+            "issue_price_pct": 117.71
+          }
+        }
+      },
+      {
+        "code": "62075",
+        "name": "雷科五",
+        "score": 20.4,
+        "signal_type": "轉換量",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 859 張，轉換強度約 35.29%。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "62075",
+            "name": "雷科五",
+            "current_outstanding": 1575,
+            "previous_outstanding": 2434,
+            "weekly_conversion_volume": 859,
+            "remaining_ratio_pct": 26.25,
+            "conversion_intensity_pct": 35.29,
+            "conversion_flag": "後段壓力"
+          }
+        }
+      },
+      {
+        "code": "62236",
+        "name": "旺矽六",
+        "score": 18.0,
+        "signal_type": "新掛牌",
+        "risk_level": "中",
+        "trading_interpretation": "近期掛牌，掛牌日 2026-06-15。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Event-driven only",
+        "raw": {
+          "new_listings": {
+            "underwriting_method": "詢圈",
+            "code": "62236",
+            "name": "旺矽六",
+            "tcri_or_guarantor": "4",
+            "issue_amount_100m": 50.0,
+            "conversion_price": 6223.0,
+            "listing_date": "2026-06-15",
+            "issue_price_pct": 100.5,
+            "decomposition_date": "2026-06-23"
+          }
+        }
+      },
+      {
+        "code": "811211",
+        "name": "至上十一",
+        "score": 18.0,
+        "signal_type": "新掛牌",
+        "risk_level": "中",
+        "trading_interpretation": "近期掛牌，掛牌日 2026-06-23。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Event-driven only",
+        "raw": {
+          "new_listings": {
+            "underwriting_method": "詢圈",
+            "code": "811211",
+            "name": "至上十一",
+            "tcri_or_guarantor": "6",
+            "issue_amount_100m": 20.0,
+            "conversion_price": 95.3,
+            "listing_date": "2026-06-23",
+            "issue_price_pct": 100.2,
+            "decomposition_date": "2026-06-30"
+          }
+        }
+      },
+      {
+        "code": "65462",
+        "name": "正基二",
+        "score": 15.0,
+        "signal_type": "流動性",
+        "risk_level": "中",
+        "trading_interpretation": "週成交量 3,736 張，日均約 747.2 張。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 1,
+            "code": "65462",
+            "name": "正基二",
+            "weekly_volume": 3736,
+            "avg_daily_volume": 747.2
+          }
+        }
+      },
+      {
+        "code": "24642",
+        "name": "盟立二",
+        "score": 14.6,
+        "signal_type": "轉換量",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 771 張，轉換強度約 15.62%。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "24642",
+            "name": "盟立二",
+            "current_outstanding": 4164,
+            "previous_outstanding": 4935,
+            "weekly_conversion_volume": 771,
+            "remaining_ratio_pct": 41.64,
+            "conversion_intensity_pct": 15.62,
+            "conversion_flag": "觀察"
+          }
+        }
+      },
+      {
+        "code": "68901",
+        "name": "來億一KY",
+        "score": 14.3,
+        "signal_type": "轉換量、流動性",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 1,161 張，轉換強度約 2.58%。；週成交量 2,249 張，日均約 449.8 張。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 6,
+            "code": "68901",
+            "name": "來億一KY",
+            "weekly_volume": 2249,
+            "avg_daily_volume": 449.8
+          },
+          "conversion_large": {
+            "code": "68901",
+            "name": "來億一KY",
+            "current_outstanding": 43839,
+            "previous_outstanding": 45000,
+            "weekly_conversion_volume": 1161,
+            "remaining_ratio_pct": 97.42,
+            "conversion_intensity_pct": 2.58,
+            "conversion_flag": "一般"
+          }
+        }
+      },
+      {
+        "code": "17172",
+        "name": "長興二",
+        "score": 13.9,
+        "signal_type": "流動性",
+        "risk_level": "中",
+        "trading_interpretation": "週成交量 3,464 張，日均約 692.8 張。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 3,
+            "code": "17172",
+            "name": "長興二",
+            "weekly_volume": 3464,
+            "avg_daily_volume": 692.8
+          }
+        }
+      },
+      {
+        "code": "64324",
+        "name": "今展科四",
+        "score": 13.0,
+        "signal_type": "轉換量、三個月賣回",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 427 張，轉換強度約 21.04%。",
+        "risk_warning": "三個月內賣回，賣回日 2026-08-16。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "64324",
+            "name": "今展科四",
+            "current_outstanding": 1602,
+            "previous_outstanding": 2029,
+            "weekly_conversion_volume": 427,
+            "remaining_ratio_pct": 64.08,
+            "conversion_intensity_pct": 21.04,
+            "conversion_flag": "警示"
+          },
+          "putback_within_3m": {
+            "code": "64324",
+            "name": "今展科四",
+            "putback_date": "2026-08-16",
+            "original_issue_volume": 2500,
+            "current_outstanding": 1602,
+            "remaining_ratio_pct": 64.08
+          }
+        }
+      },
+      {
+        "code": "68301",
+        "name": "汎銓一",
+        "score": 12.9,
+        "signal_type": "轉換量、三個月賣回、跌幅",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 672 張，轉換強度約 26.48%。",
+        "risk_warning": "三個月內賣回，賣回日 2026-08-15。；進入跌幅榜，需確認基本面或轉換賣壓原因。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_losers": {
+            "rank": 3,
+            "code": "68301",
+            "name": "汎銓一",
+            "close_price": 341.0,
+            "change_pct": -19.0
+          },
+          "conversion_large": {
+            "code": "68301",
+            "name": "汎銓一",
+            "current_outstanding": 1866,
+            "previous_outstanding": 2538,
+            "weekly_conversion_volume": 672,
+            "remaining_ratio_pct": 37.32,
+            "conversion_intensity_pct": 26.48,
+            "conversion_flag": "警示"
+          },
+          "putback_within_3m": {
+            "code": "68301",
+            "name": "汎銓一",
+            "putback_date": "2026-08-15",
+            "original_issue_volume": 5000,
+            "current_outstanding": 1866,
+            "remaining_ratio_pct": 37.32
+          }
+        }
+      },
+      {
+        "code": "80212",
+        "name": "尖點二",
+        "score": 12.5,
+        "signal_type": "轉換量、漲幅",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 256 張，轉換強度約 7.29%。；進入漲幅榜，僅作動能參考。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_gainers": {
+            "rank": 3,
+            "code": "80212",
+            "name": "尖點二",
+            "close_price": 260.0,
+            "change_pct": 17.12
+          },
+          "conversion_large": {
+            "code": "80212",
+            "name": "尖點二",
+            "current_outstanding": 3257,
+            "previous_outstanding": 3513,
+            "weekly_conversion_volume": 256,
+            "remaining_ratio_pct": 46.52,
+            "conversion_intensity_pct": 7.29,
+            "conversion_flag": "一般"
+          }
+        }
+      },
+      {
+        "code": "35831",
+        "name": "辛耘一",
+        "score": 11.9,
+        "signal_type": "轉換量、贖回風險",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 1,395 張，轉換強度約 70.78%。",
+        "risk_warning": "公司執行贖回權，終止掛牌日 2026-07-08，剩餘比率 28.8%。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "35831",
+            "name": "辛耘一",
+            "current_outstanding": 576,
+            "previous_outstanding": 1971,
+            "weekly_conversion_volume": 1395,
+            "remaining_ratio_pct": 28.8,
+            "conversion_intensity_pct": 70.78,
+            "conversion_flag": "後段壓力"
+          },
+          "company_calls": {
+            "code": "35831",
+            "name": "辛耘一",
+            "original_issue_volume": 2000,
+            "current_outstanding": 576,
+            "remaining_ratio_pct": 28.8,
+            "termination_date": "2026-07-08"
+          }
+        }
+      },
+      {
+        "code": "65152",
+        "name": "穎崴二",
+        "score": 10.6,
+        "signal_type": "轉換量、漲幅",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 619 張，轉換強度約 3.58%。；進入漲幅榜，僅作動能參考。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_gainers": {
+            "rank": 6,
+            "code": "65152",
+            "name": "穎崴二",
+            "close_price": 267.0,
+            "change_pct": 11.25
+          },
+          "conversion_large": {
+            "code": "65152",
+            "name": "穎崴二",
+            "current_outstanding": 16692,
+            "previous_outstanding": 17311,
+            "weekly_conversion_volume": 619,
+            "remaining_ratio_pct": 55.64,
+            "conversion_intensity_pct": 3.58,
+            "conversion_flag": "一般"
+          }
+        }
+      },
+      {
+        "code": "37023",
+        "name": "大聯大三",
+        "score": 10.2,
+        "signal_type": "轉換量、流動性、贖回風險",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 1,024 張，轉換強度約 7.27%。；週成交量 2,879 張，日均約 575.8 張。",
+        "risk_warning": "公司執行贖回權，終止掛牌日 2026-07-27，剩餘比率 65.34%。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 4,
+            "code": "37023",
+            "name": "大聯大三",
+            "weekly_volume": 2879,
+            "avg_daily_volume": 575.8
+          },
+          "conversion_large": {
+            "code": "37023",
+            "name": "大聯大三",
+            "current_outstanding": 13068,
+            "previous_outstanding": 14092,
+            "weekly_conversion_volume": 1024,
+            "remaining_ratio_pct": 65.34,
+            "conversion_intensity_pct": 7.27,
+            "conversion_flag": "一般"
+          },
+          "company_calls": {
+            "code": "37023",
+            "name": "大聯大三",
+            "original_issue_volume": 20000,
+            "current_outstanding": 13068,
+            "remaining_ratio_pct": 65.34,
+            "termination_date": "2026-07-27"
+          }
+        }
+      },
+      {
+        "code": "47491",
+        "name": "新應材一",
+        "score": 10.2,
+        "signal_type": "流動性",
+        "risk_level": "中",
+        "trading_interpretation": "週成交量 2,546 張，日均約 509.2 張。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 5,
+            "code": "47491",
+            "name": "新應材一",
+            "weekly_volume": 2546,
+            "avg_daily_volume": 509.2
+          }
+        }
+      },
+      {
+        "code": "30337",
+        "name": "威健七",
+        "score": 9.6,
+        "signal_type": "轉換量",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 1,385 張，轉換強度約 7.17%。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "30337",
+            "name": "威健七",
+            "current_outstanding": 17933,
+            "previous_outstanding": 19318,
+            "weekly_conversion_volume": 1385,
+            "remaining_ratio_pct": 71.73,
+            "conversion_intensity_pct": 7.17,
+            "conversion_flag": "一般"
+          }
+        }
+      },
+      {
+        "code": "68902",
+        "name": "來億二KY",
+        "score": 8.5,
+        "signal_type": "轉換量",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 452 張，轉換強度約 9.04%。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "68902",
+            "name": "來億二KY",
+            "current_outstanding": 4548,
+            "previous_outstanding": 5000,
+            "weekly_conversion_volume": 452,
+            "remaining_ratio_pct": 90.96,
+            "conversion_intensity_pct": 9.04,
+            "conversion_flag": "一般"
+          }
+        }
+      },
+      {
+        "code": "64423",
+        "name": "光聖三",
+        "score": 8.1,
+        "signal_type": "轉換量、贖回風險",
+        "risk_level": "高",
+        "trading_interpretation": "本週轉換 1,484 張，轉換強度約 67.67%。",
+        "risk_warning": "公司執行贖回權，終止掛牌日 2026-06-24，剩餘比率 4.72%。",
+        "suggested_action": "Avoid / remove from watchlist",
+        "raw": {
+          "conversion_large": {
+            "code": "64423",
+            "name": "光聖三",
+            "current_outstanding": 709,
+            "previous_outstanding": 2193,
+            "weekly_conversion_volume": 1484,
+            "remaining_ratio_pct": 4.72,
+            "conversion_intensity_pct": 67.67,
+            "conversion_flag": "後段壓力"
+          },
+          "company_calls": {
+            "code": "64423",
+            "name": "光聖三",
+            "original_issue_volume": 15000,
+            "current_outstanding": 709,
+            "remaining_ratio_pct": 4.72,
+            "termination_date": "2026-06-24"
+          }
+        }
+      },
+      {
+        "code": "24866",
+        "name": "一詮六",
+        "score": 7.7,
+        "signal_type": "轉換量、贖回風險、三個月賣回",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 1,676 張，轉換強度約 57.67%。",
+        "risk_warning": "公司執行贖回權，終止掛牌日 2026-07-20，剩餘比率 20.5%。；三個月內賣回，賣回日 2026-07-01。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "24866",
+            "name": "一詮六",
+            "current_outstanding": 1230,
+            "previous_outstanding": 2906,
+            "weekly_conversion_volume": 1676,
+            "remaining_ratio_pct": 20.5,
+            "conversion_intensity_pct": 57.67,
+            "conversion_flag": "後段壓力"
+          },
+          "company_calls": {
+            "code": "24866",
+            "name": "一詮六",
+            "original_issue_volume": 6000,
+            "current_outstanding": 1230,
+            "remaining_ratio_pct": 20.5,
+            "termination_date": "2026-07-20"
+          },
+          "putback_within_3m": {
+            "code": "24866",
+            "name": "一詮六",
+            "putback_date": "2026-07-01",
+            "original_issue_volume": 6000,
+            "current_outstanding": 1230,
+            "remaining_ratio_pct": 20.5
+          }
+        }
+      },
+      {
+        "code": "32608",
+        "name": "威剛八",
+        "score": 7.6,
+        "signal_type": "轉換量、贖回風險",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 813 張，轉換強度約 19.23%。",
+        "risk_warning": "公司執行贖回權，終止掛牌日 2026-07-10，剩餘比率 17.07%。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "32608",
+            "name": "威剛八",
+            "current_outstanding": 3414,
+            "previous_outstanding": 4227,
+            "weekly_conversion_volume": 813,
+            "remaining_ratio_pct": 17.07,
+            "conversion_intensity_pct": 19.23,
+            "conversion_flag": "觀察"
+          },
+          "company_calls": {
+            "code": "32608",
+            "name": "威剛八",
+            "original_issue_volume": 20000,
+            "current_outstanding": 3414,
+            "remaining_ratio_pct": 17.07,
+            "termination_date": "2026-07-10"
+          }
+        }
+      },
+      {
+        "code": "82993",
+        "name": "群聯三",
+        "score": 7.0,
+        "signal_type": "流動性",
+        "risk_level": "中",
+        "trading_interpretation": "週成交量 1,743 張，日均約 348.6 張。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 9,
+            "code": "82993",
+            "name": "群聯三",
+            "weekly_volume": 1743,
+            "avg_daily_volume": 348.6
+          }
+        }
+      },
+      {
+        "code": "41904",
+        "name": "佐登四KY",
+        "score": 7.0,
+        "signal_type": "競拍",
+        "risk_level": "中",
+        "trading_interpretation": "近期競拍案件，適合事件型追蹤。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Event-driven only",
+        "raw": {
+          "auction_cases": {
+            "bid_open_date": "2026-06-18",
+            "name": "佐登四KY",
+            "code": "41904",
+            "tcri_or_guarantor": "土銀",
+            "bid_start_date": "2026-06-12",
+            "bid_end_date": "2026-06-16",
+            "auction_quantity": 4750,
+            "minimum_bid_price": 100.0,
+            "listing_date": "2026-06-30",
+            "lead_underwriter": "華南永昌",
+            "conversion_price": 26.6,
+            "issue_price_pct": "未開標"
+          }
+        }
+      },
+      {
+        "code": "65463",
+        "name": "正基三",
+        "score": 7.0,
+        "signal_type": "競拍",
+        "risk_level": "中",
+        "trading_interpretation": "近期競拍案件，適合事件型追蹤。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Event-driven only",
+        "raw": {
+          "auction_cases": {
+            "bid_open_date": "2026-06-18",
+            "name": "正基三",
+            "code": "65463",
+            "tcri_or_guarantor": "6",
+            "bid_start_date": "2026-06-12",
+            "bid_end_date": "2026-06-16",
+            "auction_quantity": 1760,
+            "minimum_bid_price": 105.0,
+            "listing_date": "2026-06-30",
+            "lead_underwriter": "凱基",
+            "conversion_price": 81.5,
+            "issue_price_pct": "未開標"
+          }
+        }
+      },
+      {
+        "code": "52892",
+        "name": "宜鼎二",
+        "score": 7.0,
+        "signal_type": "競拍",
+        "risk_level": "中",
+        "trading_interpretation": "近期競拍案件，適合事件型追蹤。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Event-driven only",
+        "raw": {
+          "auction_cases": {
+            "bid_open_date": "2026-06-22",
+            "name": "宜鼎二",
+            "code": "52892",
+            "tcri_or_guarantor": "3",
+            "bid_start_date": "2026-06-15",
+            "bid_end_date": "2026-06-17",
+            "auction_quantity": 26555,
+            "minimum_bid_price": 102.0,
+            "listing_date": "2026-07-01",
+            "lead_underwriter": "凱基",
+            "conversion_price": 2180.0,
+            "issue_price_pct": "未開標"
+          }
+        }
+      },
+      {
+        "code": "61876",
+        "name": "萬潤六",
+        "score": 7.0,
+        "signal_type": "競拍",
+        "risk_level": "中",
+        "trading_interpretation": "近期競拍案件，適合事件型追蹤。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Event-driven only",
+        "raw": {
+          "auction_cases": {
+            "bid_open_date": "2026-06-23",
+            "name": "萬潤六",
+            "code": "61876",
+            "tcri_or_guarantor": "5",
+            "bid_start_date": "2026-06-16",
+            "bid_end_date": "2026-06-18",
+            "auction_quantity": 25500,
+            "minimum_bid_price": 102.0,
+            "listing_date": "2026-07-02",
+            "lead_underwriter": "元大",
+            "conversion_price": 1150.0,
+            "issue_price_pct": "未開標"
+          }
+        }
+      },
+      {
+        "code": "80273",
+        "name": "鈦昇三",
+        "score": 6.2,
+        "signal_type": "轉換量、三個月賣回、跌幅",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 207 張，轉換強度約 15.73%。",
+        "risk_warning": "三個月內賣回，賣回日 2026-07-13。；進入跌幅榜，需確認基本面或轉換賣壓原因。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_losers": {
+            "rank": 5,
+            "code": "80273",
+            "name": "鈦昇三",
+            "close_price": 414.0,
+            "change_pct": -17.2
+          },
+          "conversion_large": {
+            "code": "80273",
+            "name": "鈦昇三",
+            "current_outstanding": 1109,
+            "previous_outstanding": 1316,
+            "weekly_conversion_volume": 207,
+            "remaining_ratio_pct": 11.09,
+            "conversion_intensity_pct": 15.73,
+            "conversion_flag": "觀察"
+          },
+          "putback_within_3m": {
+            "code": "80273",
+            "name": "鈦昇三",
+            "putback_date": "2026-07-13",
+            "original_issue_volume": 10000,
+            "current_outstanding": 1109,
+            "remaining_ratio_pct": 11.09
+          }
+        }
+      },
+      {
+        "code": "80426",
+        "name": "金山電六",
+        "score": 6.0,
+        "signal_type": "漲幅",
+        "risk_level": "中",
+        "trading_interpretation": "進入漲幅榜，僅作動能參考。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_gainers": {
+            "rank": 1,
+            "code": "80426",
+            "name": "金山電六",
+            "close_price": 288.0,
+            "change_pct": 27.43
+          }
+        }
+      },
+      {
+        "code": "65852",
+        "name": "鼎基二",
+        "score": 6.0,
+        "signal_type": "漲幅",
+        "risk_level": "中",
+        "trading_interpretation": "進入漲幅榜，僅作動能參考。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_gainers": {
+            "rank": 4,
+            "code": "65852",
+            "name": "鼎基二",
+            "close_price": 123.0,
+            "change_pct": 12.69
+          }
+        }
+      },
+      {
+        "code": "84762",
+        "name": "台境二",
+        "score": 6.0,
+        "signal_type": "漲幅",
+        "risk_level": "中",
+        "trading_interpretation": "進入漲幅榜，僅作動能參考。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_gainers": {
+            "rank": 5,
+            "code": "84762",
+            "name": "台境二",
+            "close_price": 100.15,
+            "change_pct": 11.28
+          }
+        }
+      },
+      {
+        "code": "84221",
+        "name": "可寧衛一",
+        "score": 6.0,
+        "signal_type": "漲幅",
+        "risk_level": "中",
+        "trading_interpretation": "進入漲幅榜，僅作動能參考。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_gainers": {
+            "rank": 7,
+            "code": "84221",
+            "name": "可寧衛一",
+            "close_price": 209.0,
+            "change_pct": 10.0
+          }
+        }
+      },
+      {
+        "code": "64724",
+        "name": "保瑞四",
+        "score": 6.0,
+        "signal_type": "漲幅",
+        "risk_level": "中",
+        "trading_interpretation": "進入漲幅榜，僅作動能參考。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_gainers": {
+            "rank": 8,
+            "code": "64724",
+            "name": "保瑞四",
+            "close_price": 104.05,
+            "change_pct": 9.01
+          }
+        }
+      },
+      {
+        "code": "64725",
+        "name": "保瑞五",
+        "score": 6.0,
+        "signal_type": "漲幅",
+        "risk_level": "中",
+        "trading_interpretation": "進入漲幅榜，僅作動能參考。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_gainers": {
+            "rank": 9,
+            "code": "64725",
+            "name": "保瑞五",
+            "close_price": 105.0,
+            "change_pct": 8.92
+          }
+        }
+      },
+      {
+        "code": "65851",
+        "name": "鼎基一",
+        "score": 6.0,
+        "signal_type": "漲幅",
+        "risk_level": "中",
+        "trading_interpretation": "進入漲幅榜，僅作動能參考。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_gainers": {
+            "rank": 10,
+            "code": "65851",
+            "name": "鼎基一",
+            "close_price": 125.5,
+            "change_pct": 8.19
+          }
+        }
+      },
+      {
+        "code": "61973",
+        "name": "佳必琪三",
+        "score": 5.7,
+        "signal_type": "轉換量",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 460 張，轉換強度約 5.47%。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "61973",
+            "name": "佳必琪三",
+            "current_outstanding": 7943,
+            "previous_outstanding": 8403,
+            "weekly_conversion_volume": 460,
+            "remaining_ratio_pct": 79.43,
+            "conversion_intensity_pct": 5.47,
+            "conversion_flag": "一般"
+          }
+        }
+      },
+      {
+        "code": "62822",
+        "name": "康舒二",
+        "score": 5.6,
+        "signal_type": "流動性",
+        "risk_level": "中",
+        "trading_interpretation": "週成交量 1,407 張，日均約 281.4 張。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 10,
+            "code": "62822",
+            "name": "康舒二",
+            "weekly_volume": 1407,
+            "avg_daily_volume": 281.4
+          }
+        }
+      },
+      {
+        "code": "47224",
+        "name": "國精化四",
+        "score": 5.6,
+        "signal_type": "流動性",
+        "risk_level": "中",
+        "trading_interpretation": "週成交量 1,386 張，日均約 277.2 張。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 11,
+            "code": "47224",
+            "name": "國精化四",
+            "weekly_volume": 1386,
+            "avg_daily_volume": 277.2
+          }
+        }
+      },
+      {
+        "code": "61907",
+        "name": "萬泰科七",
+        "score": 5.1,
+        "signal_type": "轉換量",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 370 張，轉換強度約 5.12%。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "61907",
+            "name": "萬泰科七",
+            "current_outstanding": 6851,
+            "previous_outstanding": 7221,
+            "weekly_conversion_volume": 370,
+            "remaining_ratio_pct": 68.51,
+            "conversion_intensity_pct": 5.12,
+            "conversion_flag": "一般"
+          }
+        }
+      },
+      {
+        "code": "23683",
+        "name": "金像電三",
+        "score": 4.8,
+        "signal_type": "流動性",
+        "risk_level": "中",
+        "trading_interpretation": "週成交量 1,186 張，日均約 237.2 張。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 13,
+            "code": "23683",
+            "name": "金像電三",
+            "weekly_volume": 1186,
+            "avg_daily_volume": 237.2
+          }
+        }
+      },
+      {
+        "code": "68701",
+        "name": "騰雲一",
+        "score": 4.7,
+        "signal_type": "轉換量",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 178 張，轉換強度約 5.26%。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "68701",
+            "name": "騰雲一",
+            "current_outstanding": 3207,
+            "previous_outstanding": 3385,
+            "weekly_conversion_volume": 178,
+            "remaining_ratio_pct": 91.62,
+            "conversion_intensity_pct": 5.26,
+            "conversion_flag": "一般"
+          }
+        }
+      },
+      {
+        "code": "811210",
+        "name": "至上十",
+        "score": 4.5,
+        "signal_type": "流動性",
+        "risk_level": "中",
+        "trading_interpretation": "週成交量 1,131 張，日均約 226.2 張。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 14,
+            "code": "811210",
+            "name": "至上十",
+            "weekly_volume": 1131,
+            "avg_daily_volume": 226.2
+          }
+        }
+      },
+      {
+        "code": "30454",
+        "name": "台灣大四",
+        "score": 4.4,
+        "signal_type": "流動性",
+        "risk_level": "中",
+        "trading_interpretation": "週成交量 1,086 張，日均約 217.2 張。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 15,
+            "code": "30454",
+            "name": "台灣大四",
+            "weekly_volume": 1086,
+            "avg_daily_volume": 217.2
+          }
+        }
+      },
+      {
+        "code": "36806",
+        "name": "家登六",
+        "score": 4.2,
+        "signal_type": "流動性",
+        "risk_level": "中",
+        "trading_interpretation": "週成交量 1,039 張，日均約 207.8 張。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 16,
+            "code": "36806",
+            "name": "家登六",
+            "weekly_volume": 1039,
+            "avg_daily_volume": 207.8
+          }
+        }
+      },
+      {
+        "code": "23291",
+        "name": "華泰一",
+        "score": 4.2,
+        "signal_type": "流動性",
+        "risk_level": "中",
+        "trading_interpretation": "週成交量 1,034 張，日均約 206.8 張。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 17,
+            "code": "23291",
+            "name": "華泰一",
+            "weekly_volume": 1034,
+            "avg_daily_volume": 206.8
+          }
+        }
+      },
+      {
+        "code": "33621",
+        "name": "先進光一",
+        "score": 4.1,
+        "signal_type": "流動性",
+        "risk_level": "中",
+        "trading_interpretation": "週成交量 1,009 張，日均約 201.8 張。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 18,
+            "code": "33621",
+            "name": "先進光一",
+            "weekly_volume": 1009,
+            "avg_daily_volume": 201.8
+          }
+        }
+      },
+      {
+        "code": "68702",
+        "name": "騰雲二",
+        "score": 3.7,
+        "signal_type": "轉換量",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 139 張，轉換強度約 4.11%。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "68702",
+            "name": "騰雲二",
+            "current_outstanding": 3245,
+            "previous_outstanding": 3384,
+            "weekly_conversion_volume": 139,
+            "remaining_ratio_pct": 92.71,
+            "conversion_intensity_pct": 4.11,
+            "conversion_flag": "一般"
+          }
+        }
+      },
+      {
+        "code": "23511",
+        "name": "順德一",
+        "score": 3.1,
+        "signal_type": "轉換量",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 136 張，轉換強度約 3.38%。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "23511",
+            "name": "順德一",
+            "current_outstanding": 3885,
+            "previous_outstanding": 4021,
+            "weekly_conversion_volume": 136,
+            "remaining_ratio_pct": 32.37,
+            "conversion_intensity_pct": 3.38,
+            "conversion_flag": "一般"
+          }
+        }
+      },
+      {
+        "code": "49674",
+        "name": "十銓四",
+        "score": 2.9,
+        "signal_type": "轉換量、贖回風險",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 687 張，轉換強度約 13.76%。",
+        "risk_warning": "公司執行贖回權，終止掛牌日 2026-07-20，剩餘比率 21.52%。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "49674",
+            "name": "十銓四",
+            "current_outstanding": 4304,
+            "previous_outstanding": 4991,
+            "weekly_conversion_volume": 687,
+            "remaining_ratio_pct": 21.52,
+            "conversion_intensity_pct": 13.76,
+            "conversion_flag": "觀察"
+          },
+          "company_calls": {
+            "code": "49674",
+            "name": "十銓四",
+            "original_issue_volume": 20000,
+            "current_outstanding": 4304,
+            "remaining_ratio_pct": 21.52,
+            "termination_date": "2026-07-20"
+          }
+        }
+      },
+      {
+        "code": "64145",
+        "name": "樺漢五",
+        "score": 1.3,
+        "signal_type": "流動性、三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "週成交量 1,323 張，日均約 264.6 張。",
+        "risk_warning": "三個月內到期，到期日 2026-08-16。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 12,
+            "code": "64145",
+            "name": "樺漢五",
+            "weekly_volume": 1323,
+            "avg_daily_volume": 264.6
+          },
+          "maturity_within_3m": {
+            "code": "64145",
+            "name": "樺漢五",
+            "maturity_date": "2026-08-16",
+            "original_issue_volume": 30000,
+            "current_outstanding": 21450,
+            "conversion_stop_start": "2026-05-28",
+            "conversion_stop_end": "2026-06-22",
+            "remaining_ratio_pct": 71.5
+          }
+        }
+      },
+      {
+        "code": "30371",
+        "name": "欣興一",
+        "score": 1.2,
+        "signal_type": "轉換量",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 145 張，轉換強度約 0.99%。",
+        "risk_warning": "未見明顯賣回、贖回或到期風險，但仍需檢查溢價率與正股走勢。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "30371",
+            "name": "欣興一",
+            "current_outstanding": 14550,
+            "previous_outstanding": 14695,
+            "weekly_conversion_volume": 145,
+            "remaining_ratio_pct": 36.37,
+            "conversion_intensity_pct": 0.99,
+            "conversion_flag": "一般"
+          }
+        }
+      },
+      {
+        "code": "64512",
+        "name": "訊芯二KY",
+        "score": 0.4,
+        "signal_type": "轉換量、跌幅",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 225 張，轉換強度約 2.19%。",
+        "risk_warning": "進入跌幅榜，需確認基本面或轉換賣壓原因。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_losers": {
+            "rank": 2,
+            "code": "64512",
+            "name": "訊芯二KY",
+            "close_price": 223.0,
+            "change_pct": -19.78
+          },
+          "conversion_large": {
+            "code": "64512",
+            "name": "訊芯二KY",
+            "current_outstanding": 10029,
+            "previous_outstanding": 10254,
+            "weekly_conversion_volume": 225,
+            "remaining_ratio_pct": 40.11,
+            "conversion_intensity_pct": 2.19,
+            "conversion_flag": "一般"
+          }
+        }
+      },
+      {
+        "code": "37022",
+        "name": "大聯大二",
+        "score": 0,
+        "signal_type": "流動性、贖回風險",
+        "risk_level": "中",
+        "trading_interpretation": "週成交量 2,055 張，日均約 411.0 張。",
+        "risk_warning": "公司執行贖回權，終止掛牌日 2026-07-27，剩餘比率 76.54%。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "high_volume": {
+            "rank": 7,
+            "code": "37022",
+            "name": "大聯大二",
+            "weekly_volume": 2055,
+            "avg_daily_volume": 411.0
+          },
+          "company_calls": {
+            "code": "37022",
+            "name": "大聯大二",
+            "original_issue_volume": 35000,
+            "current_outstanding": 26789,
+            "remaining_ratio_pct": 76.54,
+            "termination_date": "2026-07-27"
+          }
+        }
+      },
+      {
+        "code": "49793",
+        "name": "華星光三",
+        "score": 0,
+        "signal_type": "跌幅",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "進入跌幅榜，需確認基本面或轉換賣壓原因。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_losers": {
+            "rank": 1,
+            "code": "49793",
+            "name": "華星光三",
+            "close_price": 260.0,
+            "change_pct": -21.92
+          }
+        }
+      },
+      {
+        "code": "47223",
+        "name": "國精化三",
+        "score": 0,
+        "signal_type": "跌幅",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "進入跌幅榜，需確認基本面或轉換賣壓原因。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_losers": {
+            "rank": 4,
+            "code": "47223",
+            "name": "國精化三",
+            "close_price": 158.0,
+            "change_pct": -18.13
+          }
+        }
+      },
+      {
+        "code": "35266",
+        "name": "凡甲六",
+        "score": 0,
+        "signal_type": "跌幅",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "進入跌幅榜，需確認基本面或轉換賣壓原因。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_losers": {
+            "rank": 6,
+            "code": "35266",
+            "name": "凡甲六",
+            "close_price": 170.0,
+            "change_pct": -17.07
+          }
+        }
+      },
+      {
+        "code": "24553",
+        "name": "全新三",
+        "score": 0,
+        "signal_type": "跌幅",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "進入跌幅榜，需確認基本面或轉換賣壓原因。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_losers": {
+            "rank": 7,
+            "code": "24553",
+            "name": "全新三",
+            "close_price": 231.0,
+            "change_pct": -16.91
+          }
+        }
+      },
+      {
+        "code": "370201",
+        "name": "大聯大E1",
+        "score": 0,
+        "signal_type": "跌幅",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "進入跌幅榜，需確認基本面或轉換賣壓原因。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_losers": {
+            "rank": 8,
+            "code": "370201",
+            "name": "大聯大E1",
+            "close_price": 146.1,
+            "change_pct": -16.51
+          }
+        }
+      },
+      {
+        "code": "24552",
+        "name": "全新二",
+        "score": 0,
+        "signal_type": "跌幅",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "進入跌幅榜，需確認基本面或轉換賣壓原因。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_losers": {
+            "rank": 9,
+            "code": "24552",
+            "name": "全新二",
+            "close_price": 214.0,
+            "change_pct": -16.41
+          }
+        }
+      },
+      {
+        "code": "65841",
+        "name": "南俊國際一",
+        "score": 0,
+        "signal_type": "贖回風險、跌幅",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "公司執行贖回權，終止掛牌日 2026-08-10，剩餘比率 5.85%。；進入跌幅榜，需確認基本面或轉換賣壓原因。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "top_losers": {
+            "rank": 10,
+            "code": "65841",
+            "name": "南俊國際一",
+            "close_price": 329.0,
+            "change_pct": -15.64
+          },
+          "company_calls": {
+            "code": "65841",
+            "name": "南俊一",
+            "original_issue_volume": 7000,
+            "current_outstanding": 410,
+            "remaining_ratio_pct": 5.85,
+            "termination_date": "2026-08-10"
+          }
+        }
+      },
+      {
+        "code": "61255",
+        "name": "廣運五",
+        "score": 0,
+        "signal_type": "賣回、三個月賣回",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "本週賣回 2,271 張，需確認市場接受度。；三個月內賣回，賣回日 2026-06-21。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "sellback_large": {
+            "code": "61255",
+            "name": "廣運五",
+            "current_outstanding": 3286,
+            "previous_outstanding": 5557,
+            "weekly_sellback_volume": -2271,
+            "remaining_ratio_pct": 54.76
+          },
+          "putback_within_3m": {
+            "code": "61255",
+            "name": "廣運五",
+            "putback_date": "2026-06-21",
+            "original_issue_volume": 6000,
+            "current_outstanding": 3286,
+            "remaining_ratio_pct": 54.76
+          }
+        }
+      },
+      {
+        "code": "41903",
+        "name": "佐登三KY",
+        "score": 0,
+        "signal_type": "賣回、三個月賣回",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "本週賣回 1,317 張，需確認市場接受度。；三個月內賣回，賣回日 2026-07-11。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "sellback_large": {
+            "code": "41903",
+            "name": "佐登三KY",
+            "current_outstanding": 4781,
+            "previous_outstanding": 6098,
+            "weekly_sellback_volume": -1317,
+            "remaining_ratio_pct": 68.3
+          },
+          "putback_within_3m": {
+            "code": "41903",
+            "name": "佐登三KY",
+            "putback_date": "2026-07-11",
+            "original_issue_volume": 7000,
+            "current_outstanding": 4781,
+            "remaining_ratio_pct": 68.3
+          }
+        }
+      },
+      {
+        "code": "24361",
+        "name": "偉詮電一",
+        "score": 0,
+        "signal_type": "轉換量、三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週轉換 251 張，轉換強度約 2.79%。",
+        "risk_warning": "三個月內到期，到期日 2026-09-11。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "conversion_large": {
+            "code": "24361",
+            "name": "偉詮電一",
+            "current_outstanding": 8734,
+            "previous_outstanding": 8985,
+            "weekly_conversion_volume": 251,
+            "remaining_ratio_pct": 79.4,
+            "conversion_intensity_pct": 2.79,
+            "conversion_flag": "一般"
+          },
+          "maturity_within_3m": {
+            "code": "24361",
+            "name": "偉詮電一",
+            "maturity_date": "2026-09-11",
+            "original_issue_volume": 11000,
+            "current_outstanding": 8734,
+            "conversion_stop_start": "2026-06-10",
+            "conversion_stop_end": "2026-07-06",
+            "remaining_ratio_pct": 79.4
+          }
+        }
+      },
+      {
+        "code": "31351",
+        "name": "凌航一",
+        "score": 0,
+        "signal_type": "贖回風險",
+        "risk_level": "高",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "公司執行贖回權，終止掛牌日 2026-06-25，剩餘比率 0.1%。",
+        "suggested_action": "Avoid / remove from watchlist",
+        "raw": {
+          "company_calls": {
+            "code": "31351",
+            "name": "凌航一",
+            "original_issue_volume": 10000,
+            "current_outstanding": 10,
+            "remaining_ratio_pct": 0.1,
+            "termination_date": "2026-06-25"
+          }
+        }
+      },
+      {
+        "code": "62756",
+        "name": "元山六",
+        "score": 0,
+        "signal_type": "贖回風險、三個月到期",
+        "risk_level": "高",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "公司執行贖回權，終止掛牌日 2026-07-15，剩餘比率 0.1%。；三個月內到期，到期日 2026-09-30。",
+        "suggested_action": "Avoid / remove from watchlist",
+        "raw": {
+          "company_calls": {
+            "code": "62756",
+            "name": "元山六",
+            "original_issue_volume": 3000,
+            "current_outstanding": 3,
+            "remaining_ratio_pct": 0.1,
+            "termination_date": "2026-07-15"
+          },
+          "maturity_within_3m": {
+            "code": "62756",
+            "name": "元山六",
+            "maturity_date": "2026-09-30",
+            "original_issue_volume": 3000,
+            "current_outstanding": 3,
+            "conversion_stop_start": "2026-03-30",
+            "conversion_stop_end": "2026-05-28",
+            "remaining_ratio_pct": 0.1
+          }
+        }
+      },
+      {
+        "code": "65842",
+        "name": "南俊二",
+        "score": 0,
+        "signal_type": "贖回風險",
+        "risk_level": "高",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "公司執行贖回權，終止掛牌日 2026-08-10，剩餘比率 0.53%。",
+        "suggested_action": "Avoid / remove from watchlist",
+        "raw": {
+          "company_calls": {
+            "code": "65842",
+            "name": "南俊二",
+            "original_issue_volume": 3000,
+            "current_outstanding": 16,
+            "remaining_ratio_pct": 0.53,
+            "termination_date": "2026-08-10"
+          }
+        }
+      },
+      {
+        "code": "65096",
+        "name": "聚和六",
+        "score": 0,
+        "signal_type": "三個月賣回",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內賣回，賣回日 2026-07-03。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "putback_within_3m": {
+            "code": "65096",
+            "name": "聚和六",
+            "putback_date": "2026-07-03",
+            "original_issue_volume": 5000,
+            "current_outstanding": 4798,
+            "remaining_ratio_pct": 95.96
+          }
+        }
+      },
+      {
+        "code": "45721",
+        "name": "駐龍一",
+        "score": 0,
+        "signal_type": "三個月賣回",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內賣回，賣回日 2026-07-16。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "putback_within_3m": {
+            "code": "45721",
+            "name": "駐龍一",
+            "putback_date": "2026-07-16",
+            "original_issue_volume": 5000,
+            "current_outstanding": 5000,
+            "remaining_ratio_pct": 100.0
+          }
+        }
+      },
+      {
+        "code": "15364",
+        "name": "和大四",
+        "score": 0,
+        "signal_type": "三個月賣回",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內賣回，賣回日 2026-08-12。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "putback_within_3m": {
+            "code": "15364",
+            "name": "和大四",
+            "putback_date": "2026-08-12",
+            "original_issue_volume": 15000,
+            "current_outstanding": 15000,
+            "remaining_ratio_pct": 100.0
+          }
+        }
+      },
+      {
+        "code": "41372",
+        "name": "麗豐二KY",
+        "score": 0,
+        "signal_type": "三個月賣回",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內賣回，賣回日 2026-08-12。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "putback_within_3m": {
+            "code": "41372",
+            "name": "麗豐二KY",
+            "putback_date": "2026-08-12",
+            "original_issue_volume": 11000,
+            "current_outstanding": 11000,
+            "remaining_ratio_pct": 100.0
+          }
+        }
+      },
+      {
+        "code": "80914",
+        "name": "翔名四",
+        "score": 0,
+        "signal_type": "三個月賣回",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內賣回，賣回日 2026-08-15。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "putback_within_3m": {
+            "code": "80914",
+            "name": "翔名四",
+            "putback_date": "2026-08-15",
+            "original_issue_volume": 5500,
+            "current_outstanding": 2887,
+            "remaining_ratio_pct": 52.49
+          }
+        }
+      },
+      {
+        "code": "89278",
+        "name": "北基八",
+        "score": 0,
+        "signal_type": "三個月賣回",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內賣回，賣回日 2026-08-21。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "putback_within_3m": {
+            "code": "89278",
+            "name": "北基八",
+            "putback_date": "2026-08-21",
+            "original_issue_volume": 5000,
+            "current_outstanding": 4998,
+            "remaining_ratio_pct": 99.96
+          }
+        }
+      },
+      {
+        "code": "14363",
+        "name": "華友聯三",
+        "score": 0,
+        "signal_type": "三個月賣回",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內賣回，賣回日 2026-08-27。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "putback_within_3m": {
+            "code": "14363",
+            "name": "華友聯三",
+            "putback_date": "2026-08-27",
+            "original_issue_volume": 6000,
+            "current_outstanding": 5990,
+            "remaining_ratio_pct": 99.83
+          }
+        }
+      },
+      {
+        "code": "61794",
+        "name": "亞通四",
+        "score": 0,
+        "signal_type": "三個月賣回",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內賣回，賣回日 2026-08-28。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "putback_within_3m": {
+            "code": "61794",
+            "name": "亞通四",
+            "putback_date": "2026-08-28",
+            "original_issue_volume": 6000,
+            "current_outstanding": 5954,
+            "remaining_ratio_pct": 99.23
+          }
+        }
+      },
+      {
+        "code": "44163",
+        "name": "三圓三",
+        "score": 0,
+        "signal_type": "三個月賣回",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內賣回，賣回日 2026-09-30。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "putback_within_3m": {
+            "code": "44163",
+            "name": "三圓三",
+            "putback_date": "2026-09-30",
+            "original_issue_volume": 10000,
+            "current_outstanding": 9559,
+            "remaining_ratio_pct": 95.59
+          }
+        }
+      },
+      {
+        "code": "35871",
+        "name": "閎康一",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-06-20。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "35871",
+            "name": "閎康一",
+            "maturity_date": "2026-06-20",
+            "original_issue_volume": 6000,
+            "current_outstanding": 196,
+            "conversion_stop_start": "2026-04-20",
+            "conversion_stop_end": "2026-06-18",
+            "remaining_ratio_pct": 3.26
+          }
+        }
+      },
+      {
+        "code": "56086",
+        "name": "四維航六",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-06-21。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "56086",
+            "name": "四維航六",
+            "maturity_date": "2026-06-21",
+            "original_issue_volume": 5000,
+            "current_outstanding": 4998,
+            "conversion_stop_start": "2025-04-27",
+            "conversion_stop_end": "2025-06-25",
+            "remaining_ratio_pct": 99.96
+          }
+        }
+      },
+      {
+        "code": "54342",
+        "name": "崇越二",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-06-29。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "54342",
+            "name": "崇越二",
+            "maturity_date": "2026-06-29",
+            "original_issue_volume": 10000,
+            "current_outstanding": 118,
+            "conversion_stop_start": "2026-03-28",
+            "conversion_stop_end": "2026-05-26",
+            "remaining_ratio_pct": 1.18
+          }
+        }
+      },
+      {
+        "code": "31282",
+        "name": "昇銳二",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-07-03。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "31282",
+            "name": "昇銳二",
+            "maturity_date": "2026-07-03",
+            "original_issue_volume": 3000,
+            "current_outstanding": 1083,
+            "conversion_stop_start": "2025-08-05",
+            "conversion_stop_end": "2025-08-30",
+            "remaining_ratio_pct": 36.1
+          }
+        }
+      },
+      {
+        "code": "30922",
+        "name": "鴻碩二",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-07-04。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "30922",
+            "name": "鴻碩二",
+            "maturity_date": "2026-07-04",
+            "original_issue_volume": 2500,
+            "current_outstanding": 428,
+            "conversion_stop_start": "2026-03-29",
+            "conversion_stop_end": "2026-05-27",
+            "remaining_ratio_pct": 17.12
+          }
+        }
+      },
+      {
+        "code": "52303",
+        "name": "雷笛克光學三",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-07-24。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "52303",
+            "name": "雷笛克光學三",
+            "maturity_date": "2026-07-24",
+            "original_issue_volume": 3000,
+            "current_outstanding": 596,
+            "conversion_stop_start": "2026-06-04",
+            "conversion_stop_end": "2026-06-30",
+            "remaining_ratio_pct": 19.86
+          }
+        }
+      },
+      {
+        "code": "61793",
+        "name": "亞通三",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-07-25。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "61793",
+            "name": "亞通三",
+            "maturity_date": "2026-07-25",
+            "original_issue_volume": 3000,
+            "current_outstanding": 473,
+            "conversion_stop_start": "2026-03-31",
+            "conversion_stop_end": "2026-05-29",
+            "remaining_ratio_pct": 15.76
+          }
+        }
+      },
+      {
+        "code": "84662",
+        "name": "美吉吉二KY",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-07-26。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "84662",
+            "name": "美吉吉二KY",
+            "maturity_date": "2026-07-26",
+            "original_issue_volume": 5000,
+            "current_outstanding": 252,
+            "conversion_stop_start": "2026-04-25",
+            "conversion_stop_end": "2026-06-23",
+            "remaining_ratio_pct": 5.04
+          }
+        }
+      },
+      {
+        "code": "61827",
+        "name": "合晶七",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-07-27。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "61827",
+            "name": "合晶七",
+            "maturity_date": "2026-07-27",
+            "original_issue_volume": 3000,
+            "current_outstanding": 2976,
+            "conversion_stop_start": "2026-03-26",
+            "conversion_stop_end": "2026-06-18",
+            "remaining_ratio_pct": 99.2
+          }
+        }
+      },
+      {
+        "code": "20662",
+        "name": "世德二",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-07-31。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "20662",
+            "name": "世德二",
+            "maturity_date": "2026-07-31",
+            "original_issue_volume": 4000,
+            "current_outstanding": 2378,
+            "conversion_stop_start": "2025-10-14",
+            "conversion_stop_end": "2025-11-09",
+            "remaining_ratio_pct": 59.45
+          }
+        }
+      },
+      {
+        "code": "50097",
+        "name": "榮剛七",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-07-31。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "50097",
+            "name": "榮剛七",
+            "maturity_date": "2026-07-31",
+            "original_issue_volume": 50000,
+            "current_outstanding": 49999,
+            "conversion_stop_start": "2026-06-09",
+            "conversion_stop_end": "2026-07-05",
+            "remaining_ratio_pct": 99.99
+          }
+        }
+      },
+      {
+        "code": "23383",
+        "name": "光罩三",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-08-03。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "23383",
+            "name": "光罩三",
+            "maturity_date": "2026-08-03",
+            "original_issue_volume": 20000,
+            "current_outstanding": 979,
+            "conversion_stop_start": "2026-04-20",
+            "conversion_stop_end": "2026-06-18",
+            "remaining_ratio_pct": 4.89
+          }
+        }
+      },
+      {
+        "code": "64773",
+        "name": "安集三",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-08-04。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "64773",
+            "name": "安集三",
+            "maturity_date": "2026-08-04",
+            "original_issue_volume": 5000,
+            "current_outstanding": 1931,
+            "conversion_stop_start": "2025-06-10",
+            "conversion_stop_end": "2025-07-05",
+            "remaining_ratio_pct": 38.62
+          }
+        }
+      },
+      {
+        "code": "53095",
+        "name": "系統電五",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-08-08。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "53095",
+            "name": "系統電五",
+            "maturity_date": "2026-08-08",
+            "original_issue_volume": 5000,
+            "current_outstanding": 127,
+            "conversion_stop_start": "2026-05-15",
+            "conversion_stop_end": "2026-06-09",
+            "remaining_ratio_pct": 2.54
+          }
+        }
+      },
+      {
+        "code": "82551",
+        "name": "朋程一",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-08-09。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "82551",
+            "name": "朋程一",
+            "maturity_date": "2026-08-09",
+            "original_issue_volume": 8000,
+            "current_outstanding": 7999,
+            "conversion_stop_start": "2026-06-15",
+            "conversion_stop_end": "2026-07-11",
+            "remaining_ratio_pct": 99.98
+          }
+        }
+      },
+      {
+        "code": "24624",
+        "name": "良得電四",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-08-11。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "24624",
+            "name": "良得電四",
+            "maturity_date": "2026-08-11",
+            "original_issue_volume": 4000,
+            "current_outstanding": 2443,
+            "conversion_stop_start": "2026-06-12",
+            "conversion_stop_end": "2026-07-08",
+            "remaining_ratio_pct": 61.07
+          }
+        }
+      },
+      {
+        "code": "67961",
+        "name": "晉弘一",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-08-25。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "67961",
+            "name": "晉弘一",
+            "maturity_date": "2026-08-25",
+            "original_issue_volume": 2000,
+            "current_outstanding": 2000,
+            "conversion_stop_start": "2026-04-25",
+            "conversion_stop_end": "2026-06-23",
+            "remaining_ratio_pct": 100.0
+          }
+        }
+      },
+      {
+        "code": "30882",
+        "name": "艾訊二",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-08-28。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "30882",
+            "name": "艾訊二",
+            "maturity_date": "2026-08-28",
+            "original_issue_volume": 8000,
+            "current_outstanding": 2030,
+            "conversion_stop_start": "2026-03-29",
+            "conversion_stop_end": "2026-05-27",
+            "remaining_ratio_pct": 25.37
+          }
+        }
+      },
+      {
+        "code": "15864",
+        "name": "和勤四",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-08-30。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "15864",
+            "name": "和勤四",
+            "maturity_date": "2026-08-30",
+            "original_issue_volume": 2000,
+            "current_outstanding": 2000,
+            "conversion_stop_start": "2026-06-01",
+            "conversion_stop_end": "2026-06-27",
+            "remaining_ratio_pct": 100.0
+          }
+        }
+      },
+      {
+        "code": "15865",
+        "name": "和勤五",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-08-31。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "15865",
+            "name": "和勤五",
+            "maturity_date": "2026-08-31",
+            "original_issue_volume": 3000,
+            "current_outstanding": 2902,
+            "conversion_stop_start": "2026-06-01",
+            "conversion_stop_end": "2026-06-27",
+            "remaining_ratio_pct": 96.73
+          }
+        }
+      },
+      {
+        "code": "29061",
+        "name": "高林一",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-09-20。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "29061",
+            "name": "高林一",
+            "maturity_date": "2026-09-20",
+            "original_issue_volume": 10000,
+            "current_outstanding": 4600,
+            "conversion_stop_start": "2026-04-19",
+            "conversion_stop_end": "2026-06-17",
+            "remaining_ratio_pct": 46.0
+          }
+        }
+      },
+      {
+        "code": "37083",
+        "name": "上緯投控三",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-09-27。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "37083",
+            "name": "上緯投控三",
+            "maturity_date": "2026-09-27",
+            "original_issue_volume": 10000,
+            "current_outstanding": 2531,
+            "conversion_stop_start": "2026-03-30",
+            "conversion_stop_end": "2026-05-28",
+            "remaining_ratio_pct": 25.31
+          }
+        }
+      },
+      {
+        "code": "37084",
+        "name": "上緯投控四",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-09-28。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "37084",
+            "name": "上緯投控四",
+            "maturity_date": "2026-09-28",
+            "original_issue_volume": 10000,
+            "current_outstanding": 622,
+            "conversion_stop_start": "2026-06-08",
+            "conversion_stop_end": "2026-07-04",
+            "remaining_ratio_pct": 6.22
+          }
+        }
+      },
+      {
+        "code": "68731",
+        "name": "泓德能源一",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-09-28。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "68731",
+            "name": "泓德能源一",
+            "maturity_date": "2026-09-28",
+            "original_issue_volume": 10000,
+            "current_outstanding": 235,
+            "conversion_stop_start": "2026-04-14",
+            "conversion_stop_end": "2026-06-12",
+            "remaining_ratio_pct": 2.35
+          }
+        }
+      },
+      {
+        "code": "84732",
+        "name": "山林水二",
+        "score": 0,
+        "signal_type": "三個月到期",
+        "risk_level": "中",
+        "trading_interpretation": "本週有週評訊號，建議搭配流動性與剩餘比率檢查。",
+        "risk_warning": "三個月內到期，到期日 2026-09-28。",
+        "suggested_action": "Watch only",
+        "raw": {
+          "maturity_within_3m": {
+            "code": "84732",
+            "name": "山林水二",
+            "maturity_date": "2026-09-28",
+            "original_issue_volume": 10000,
+            "current_outstanding": 2439,
+            "conversion_stop_start": "2026-04-17",
+            "conversion_stop_end": "2026-06-15",
+            "remaining_ratio_pct": 24.39
+          }
+        }
+      }
+    ],
+    "summary": {
+      "high_volume_count": 18,
+      "new_listings_count": 5,
+      "conversion_large_count": 27,
+      "sellback_large_count": 2,
+      "company_call_count": 13,
+      "interpretation_zh": "本週高轉換量標的有 27 檔，新掛牌 5 檔，高成交量 18 檔。追蹤順序以轉換量與新掛牌為主，賣回、贖回與到期風險會降低一般交易優先度。"
+    }
+  }
+];

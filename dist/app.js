@@ -1,17 +1,21 @@
-const data = window.CB_WEEKLY_DATA || {};
+const historyData = (window.CB_WEEKLY_HISTORY && window.CB_WEEKLY_HISTORY.length)
+  ? window.CB_WEEKLY_HISTORY
+  : [window.CB_WEEKLY_DATA].filter(Boolean);
+
+let data = historyData[historyData.length - 1] || {};
 let currentRows = [];
 
 const tableLabels = {
-  high_volume: "可轉債成交張數大於 1000 張",
-  top_gainers: "漲幅前十大 CB",
-  top_losers: "跌幅前十大 CB",
-  sellback_large: "CB 賣回張數大於 100 張",
-  new_listings: "近期掛牌 CB",
-  conversion_large: "CB 轉換張數大於 100 張",
-  auction_cases: "近期競拍 CB 案件",
-  company_calls: "近期公司執行贖回權的 CB",
-  putback_within_3m: "三個月內賣回的 CB",
-  maturity_within_3m: "三個月內到期的 CB",
+  high_volume: "成交量大於 1000 張",
+  top_gainers: "漲幅前十大",
+  top_losers: "跌幅前十大",
+  sellback_large: "賣回大於 100 張",
+  new_listings: "近期掛牌",
+  conversion_large: "轉換大於 100 張",
+  auction_cases: "近期競拍",
+  company_calls: "公司贖回風險",
+  putback_within_3m: "三個月內賣回",
+  maturity_within_3m: "三個月內到期",
 };
 
 const actionClass = {
@@ -20,6 +24,16 @@ const actionClass = {
   "Avoid / remove from watchlist": "avoid",
   "Event-driven only": "event",
 };
+
+function periodKey(item) {
+  const period = item.report_period || {};
+  return `${period.start || ""}_${period.end || ""}`;
+}
+
+function periodLabel(item) {
+  const period = item.report_period || {};
+  return `${period.start || ""} ~ ${period.end || ""}`;
+}
 
 function formatNumber(value) {
   if (value === null || value === undefined || value === "") return "";
@@ -31,9 +45,20 @@ function csvEscape(value) {
   return `"${String(value ?? "").replaceAll('"', '""')}"`;
 }
 
+function initPeriodFilter() {
+  const select = document.getElementById("periodFilter");
+  select.innerHTML = historyData
+    .map((item) => `<option value="${periodKey(item)}">${periodLabel(item)}</option>`)
+    .join("");
+  select.value = periodKey(data);
+  select.addEventListener("change", () => {
+    data = historyData.find((item) => periodKey(item) === select.value) || data;
+    resetSignalFilter();
+    renderAll();
+  });
+}
+
 function initSummary() {
-  const period = data.report_period || {};
-  document.getElementById("period").textContent = `${period.start || ""} ~ ${period.end || ""}`;
   const summary = data.summary || {};
   const metrics = [
     ["高成交量", summary.high_volume_count],
@@ -46,22 +71,20 @@ function initSummary() {
     metrics
       .map(([label, value]) => `<article class="metric"><span>${label}</span><strong>${formatNumber(value)}</strong></article>`)
       .join("") +
-    `<article class="metric wide"><span>市場解讀</span><strong style="font-size:16px;line-height:1.7">${summary.interpretation_zh || ""}</strong></article>`;
+    `<article class="metric wide"><span>市場解讀</span><strong>${summary.interpretation_zh || ""}</strong></article>`;
 }
 
 function initWarnings() {
   const warnings = data.warnings || [];
   const node = document.getElementById("warnings");
-  if (!warnings.length) {
-    node.innerHTML = "";
-    return;
-  }
-  node.innerHTML = warnings
-    .map((warning) => `<div class="warning-card"><strong>${warning.table}</strong>：${warning.message}</div>`)
-    .join("");
+  node.innerHTML = warnings.length
+    ? warnings.map((warning) => `<div class="warning-card"><strong>${warning.table}</strong>：${warning.message}</div>`).join("")
+    : "";
 }
 
-function initFilters() {
+function resetSignalFilter() {
+  const select = document.getElementById("signalFilter");
+  const previous = select.value;
   const signals = new Set();
   (data.watchlist || []).forEach((row) => {
     String(row.signal_type || "")
@@ -69,13 +92,13 @@ function initFilters() {
       .filter(Boolean)
       .forEach((signal) => signals.add(signal));
   });
-  const select = document.getElementById("signalFilter");
-  [...signals].sort().forEach((signal) => {
-    const option = document.createElement("option");
-    option.value = signal;
-    option.textContent = signal;
-    select.appendChild(option);
-  });
+  select.innerHTML = `<option value="">全部訊號</option>` +
+    [...signals].sort().map((signal) => `<option value="${signal}">${signal}</option>`).join("");
+  if ([...signals].includes(previous)) select.value = previous;
+}
+
+function initFilters() {
+  resetSignalFilter();
   ["search", "signalFilter", "riskFilter", "sortBy"].forEach((id) => {
     document.getElementById(id).addEventListener("input", renderWatchlist);
   });
@@ -152,6 +175,97 @@ function renderDetailTables() {
     .join("");
 }
 
+function barChart(containerId, items, options = {}) {
+  const node = document.getElementById(containerId);
+  const max = Math.max(...items.map((item) => item.value), 1);
+  node.innerHTML = `<div class="bar-chart">
+    ${items.map((item) => `
+      <div class="bar-row">
+        <span class="bar-label">${item.label}</span>
+        <div class="bar-track"><div class="bar-fill" style="width:${Math.max(3, item.value / max * 100)}%"></div></div>
+        <span class="bar-value">${options.percent ? `${item.value}%` : formatNumber(item.value)}</span>
+      </div>
+    `).join("")}
+  </div>`;
+}
+
+function renderSignalChart() {
+  const tables = data.tables || {};
+  const items = [
+    ["轉換量", tables.conversion_large?.length || 0],
+    ["新掛牌", tables.new_listings?.length || 0],
+    ["賣回", tables.sellback_large?.length || 0],
+    ["贖回", tables.company_calls?.length || 0],
+    ["流動性", tables.high_volume?.length || 0],
+    ["競拍", tables.auction_cases?.length || 0],
+  ].map(([label, value]) => ({ label, value }));
+  barChart("signalChart", items);
+}
+
+function renderScoreChart() {
+  const items = (data.watchlist || [])
+    .slice(0, 10)
+    .map((row) => ({ label: `${row.code} ${row.name}`, value: row.score || 0 }));
+  barChart("scoreChart", items);
+}
+
+function renderConversionChart() {
+  const rows = (data.tables?.conversion_large || []).slice(0, 12);
+  const maxVolume = Math.max(...rows.map((row) => row.weekly_conversion_volume || 0), 1);
+  const maxIntensity = Math.max(...rows.map((row) => row.conversion_intensity_pct || 0), 1);
+  const width = 640;
+  const height = 280;
+  const points = rows.map((row, index) => {
+    const x = 52 + ((row.weekly_conversion_volume || 0) / maxVolume) * 520;
+    const y = 230 - ((row.conversion_intensity_pct || 0) / maxIntensity) * 180;
+    return { ...row, index, x, y };
+  });
+  document.getElementById("conversionChart").innerHTML = `
+    <svg class="svg-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="轉換量與轉換強度散點圖">
+      <line x1="46" y1="230" x2="585" y2="230" />
+      <line x1="46" y1="38" x2="46" y2="230" />
+      <text x="46" y="258">轉換量</text>
+      <text x="12" y="34">強度</text>
+      ${points.map((point) => `
+        <g>
+          <circle cx="${point.x}" cy="${point.y}" r="7" />
+          <text x="${point.x + 10}" y="${point.y + 4}">${point.code}</text>
+        </g>
+      `).join("")}
+    </svg>`;
+}
+
+function renderTrendChart() {
+  const items = historyData.map((item) => ({
+    label: (item.report_period?.end || "").slice(5),
+    conversion: item.summary?.conversion_large_count || 0,
+    listing: item.summary?.new_listings_count || 0,
+    risk: item.summary?.company_call_count || 0,
+  }));
+  const max = Math.max(...items.flatMap((item) => [item.conversion, item.listing, item.risk]), 1);
+  document.getElementById("trendChart").innerHTML = `
+    <div class="trend-chart">
+      ${items.map((item) => `
+        <div class="trend-group">
+          <div class="trend-bars">
+            <span title="高轉換量" style="height:${Math.max(4, item.conversion / max * 100)}%"></span>
+            <span title="新掛牌" style="height:${Math.max(4, item.listing / max * 100)}%"></span>
+            <span title="贖回風險" style="height:${Math.max(4, item.risk / max * 100)}%"></span>
+          </div>
+          <small>${item.label}</small>
+        </div>
+      `).join("")}
+    </div>
+    <div class="legend"><span class="dot conversion"></span>高轉換量 <span class="dot listing"></span>新掛牌 <span class="dot risk"></span>贖回風險</div>`;
+}
+
+function renderCharts() {
+  renderSignalChart();
+  renderScoreChart();
+  renderConversionChart();
+  renderTrendChart();
+}
+
 function openModal(code) {
   const row = (data.watchlist || []).find((item) => item.code === code);
   if (!row) return;
@@ -181,14 +295,20 @@ function exportCsv() {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = "cbas_priority_watchlist.csv";
+  link.download = `cbas_priority_watchlist_${periodKey(data)}.csv`;
   link.click();
   URL.revokeObjectURL(url);
 }
 
+function renderAll() {
+  initSummary();
+  initWarnings();
+  renderCharts();
+  renderWatchlist();
+  renderDetailTables();
+}
+
 document.getElementById("closeModal").addEventListener("click", () => document.getElementById("detailModal").close());
-initSummary();
-initWarnings();
+initPeriodFilter();
 initFilters();
-renderWatchlist();
-renderDetailTables();
+renderAll();
