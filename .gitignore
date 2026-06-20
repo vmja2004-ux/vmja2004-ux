@@ -11,3 +11,8 @@ Thumbs.db
 
 # Keep previously tracked raw PDFs, but do not add every local archive PDF by accident.
 /data/raw/*.pdf
+
+# Local CBAS source workbooks stay on this machine; publish only generated web data.
+/data/source/cbas/*.xlsx
+/data/source/cbas/*.xls
+/data/history/cbas/*.json

@@ -3,116 +3,97 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Yuanta CB Weekly Dashboard</title>
+    <title>CBAS 報價及發行資訊</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="topbar">
+    <header class="app-header">
       <div>
-        <p class="eyebrow">Yuanta CB Weekly</p>
-        <h1>可轉債市場資訊週評儀表板</h1>
+        <p class="eyebrow">CBAS Monitor</p>
+        <h1>CBAS 報價及發行資訊</h1>
+        <p id="subtitle" class="subtitle">讀取資料中。</p>
       </div>
-      <div class="period">
-        <label for="periodFilter">資料週期</label>
-        <select id="periodFilter"></select>
+      <div class="header-actions">
+        <button id="downloadJson" type="button" title="下載 JSON">JSON</button>
+        <button id="downloadCsv" type="button" title="下載目前報價表">CSV</button>
       </div>
     </header>
 
     <main>
-      <section class="summary-grid" id="summary"></section>
+      <section class="metrics" id="metrics"></section>
 
-      <section class="warnings" id="warnings"></section>
-
-      <section class="chart-grid">
-        <article class="chart-card">
-          <div class="panel-heading compact">
-            <h2>核心訊號概況</h2>
-            <span>表格筆數</span>
-          </div>
-          <div id="signalChart" class="chart"></div>
-        </article>
-        <article class="chart-card">
-          <div class="panel-heading compact">
-            <h2>前十名追蹤分數</h2>
-            <span>分數排行</span>
-          </div>
-          <div id="scoreChart" class="chart"></div>
-        </article>
-        <article class="chart-card">
-          <div class="panel-heading compact">
-            <h2>轉換強度</h2>
-            <span>本週轉換量與強度</span>
-          </div>
-          <div id="conversionChart" class="chart"></div>
-        </article>
-        <article class="chart-card">
-          <div class="panel-heading compact">
-            <h2>週期趨勢</h2>
-            <span>歷史資料</span>
-          </div>
-          <div id="trendChart" class="chart"></div>
-        </article>
+      <section class="toolbar" aria-label="查詢工具">
+        <label>
+          <span>搜尋</span>
+          <input id="searchInput" type="search" placeholder="代碼、名稱、券商、日期" />
+        </label>
+        <label>
+          <span>資料類型</span>
+          <select id="viewSelect">
+            <option value="quotes">券商報價</option>
+            <option value="primary_market">初級市場</option>
+            <option value="events">到期／贖回提醒</option>
+          </select>
+        </label>
+        <label>
+          <span>來源檔</span>
+          <select id="sourceSelect">
+            <option value="">全部來源</option>
+          </select>
+        </label>
+        <label>
+          <span>排序</span>
+          <select id="sortSelect">
+            <option value="code">代碼</option>
+            <option value="premium">權利金</option>
+            <option value="date">日期</option>
+            <option value="score">觀察分數</option>
+          </select>
+        </label>
       </section>
 
-      <section class="toolbar" aria-label="watchlist controls">
-        <input id="search" type="search" placeholder="搜尋代碼或名稱" />
-        <select id="signalFilter">
-          <option value="">全部訊號</option>
-        </select>
-        <select id="riskFilter">
-          <option value="">全部風險</option>
-          <option value="低">低</option>
-          <option value="中">中</option>
-          <option value="高">高</option>
-        </select>
-        <select id="sortBy">
-          <option value="score">依分數排序</option>
-          <option value="volume">依成交量排序</option>
-          <option value="remaining">依剩餘比率排序</option>
-          <option value="listing">依掛牌日排序</option>
-        </select>
-        <button id="exportCsv" type="button">匯出 CSV</button>
+      <section class="focus-layout">
+        <article class="watchlist">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Focus</p>
+              <h2>優先觀察標的</h2>
+            </div>
+            <span id="watchlistCount"></span>
+          </div>
+          <div id="watchlistRows" class="watchlist-rows"></div>
+        </article>
+
+        <aside class="source-status">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Sources</p>
+              <h2>來源狀態</h2>
+            </div>
+          </div>
+          <div id="sourceRows" class="source-rows"></div>
+          <div id="warningRows" class="warning-rows"></div>
+        </aside>
       </section>
 
-      <section class="panel">
-        <div class="panel-heading">
-          <h2>CBAS Priority Watchlist</h2>
-          <span id="resultCount"></span>
+      <section class="table-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" id="tableEyebrow">Quotes</p>
+            <h2 id="tableTitle">券商報價</h2>
+          </div>
+          <span id="rowCount"></span>
         </div>
         <div class="table-wrap">
           <table>
-            <thead>
-              <tr>
-                <th>排名</th>
-                <th>代碼</th>
-                <th>名稱</th>
-                <th>分數</th>
-                <th>訊號</th>
-                <th>風險</th>
-                <th>建議動作</th>
-                <th>交易解讀</th>
-              </tr>
-            </thead>
-            <tbody id="watchlistBody"></tbody>
+            <thead id="tableHead"></thead>
+            <tbody id="tableBody"></tbody>
           </table>
         </div>
       </section>
-
-      <section class="tables-grid" id="detailTables"></section>
     </main>
 
-    <dialog id="detailModal">
-      <div class="modal-head">
-        <div>
-          <p id="modalCode" class="eyebrow"></p>
-          <h2 id="modalTitle"></h2>
-        </div>
-        <button id="closeModal" type="button">關閉</button>
-      </div>
-      <div id="modalContent"></div>
-    </dialog>
-
-    <script src="./data.js"></script>
+    <script src="./data/cbas-latest.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>

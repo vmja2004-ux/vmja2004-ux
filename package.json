@@ -1,11 +1,14 @@
 {
-  "name": "yuanta-cb-weekly-dashboard",
+  "name": "cbas-market-dashboard",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "update:weekly": "python scripts/update_weekly.py && python scripts/test_weekly.py",
+    "update:daily": "python scripts/update_daily.py && python scripts/test_daily.py",
+    "update:cbas": "python scripts/update_cbas.py && python scripts/test_cbas.py",
     "dev": "python -m http.server 5173 -d dist",
-    "build": "python scripts/update_weekly.py",
-    "test": "python scripts/test_weekly.py"
+    "build": "python scripts/update_cbas.py",
+    "test": "python scripts/test_cbas.py",
+    "test:weekly": "python scripts/test_weekly.py"
   }
 }

@@ -1,314 +1,251 @@
-const historyData = (window.CB_WEEKLY_HISTORY && window.CB_WEEKLY_HISTORY.length)
-  ? window.CB_WEEKLY_HISTORY
-  : [window.CB_WEEKLY_DATA].filter(Boolean);
-
-let data = historyData[historyData.length - 1] || {};
-let currentRows = [];
-
-const tableLabels = {
-  high_volume: "成交量大於 1000 張",
-  top_gainers: "漲幅前十大",
-  top_losers: "跌幅前十大",
-  sellback_large: "賣回大於 100 張",
-  new_listings: "近期掛牌",
-  conversion_large: "轉換大於 100 張",
-  auction_cases: "近期競拍",
-  company_calls: "公司贖回風險",
-  putback_within_3m: "三個月內賣回",
-  maturity_within_3m: "三個月內到期",
+const data = window.CBAS_DATA || {
+  generated_at: "",
+  latest_source_date: "",
+  source_files: [],
+  summary: {},
+  quotes: [],
+  primary_market: [],
+  events: [],
+  warnings: [],
 };
 
-const actionClass = {
-  "Priority research": "priority",
-  "Watch only": "watch",
-  "Avoid / remove from watchlist": "avoid",
-  "Event-driven only": "event",
+function unpackDataset(dataset) {
+  if (Array.isArray(dataset)) return dataset;
+  if (!dataset?.columns || !dataset?.rows) return [];
+  return dataset.rows.map((row) => Object.fromEntries(dataset.columns.map((column, index) => [column, row[index]])));
+}
+
+const quoteRows = unpackDataset(data.quotes);
+const primaryRows = unpackDataset(data.primary_market);
+const eventRows = unpackDataset(data.events);
+
+function sourceName(sourceId) {
+  const source = (data.source_files || [])[sourceId];
+  return source?.name || "";
+}
+
+const views = {
+  quotes: {
+    title: "券商報價",
+    eyebrow: "Quotes",
+    rows: () => quoteRows,
+    columns: [
+      ["cb_code", "CB 代碼"],
+      ["cb_name", "名稱"],
+      ["premium_per_100", "百元權利金"],
+      ["premium_reference", "參考權利金"],
+      ["cb_price", "CB 價"],
+      ["parity", "轉換價值"],
+      ["premium_ratio", "折溢價"],
+      ["option_expiration", "選擇權到期"],
+      ["put_date", "賣回日"],
+      ["source_id", "來源"],
+    ],
+  },
+  primary_market: {
+    title: "初級市場",
+    eyebrow: "Primary",
+    rows: () => primaryRows,
+    columns: [
+      ["cb_code", "CB 代碼"],
+      ["cb_name", "名稱"],
+      ["issue_type", "類型"],
+      ["issue_amount_100m", "發行量（億）"],
+      ["tcri_or_guarantor", "TCRI／擔保"],
+      ["lead_underwriter", "主辦券商"],
+      ["bookbuilding_period", "詢圈／投標"],
+      ["listing_date", "掛牌日"],
+      ["op_effective_date", "OP 生效日"],
+      ["source_id", "來源"],
+    ],
+  },
+  events: {
+    title: "到期／贖回提醒",
+    eyebrow: "Events",
+    rows: () => eventRows,
+    columns: [
+      ["stock_code", "股票代碼"],
+      ["cb_code", "CB 代碼"],
+      ["name", "名稱"],
+      ["event_type", "狀態"],
+      ["redeem_date", "贖回／終止日"],
+      ["next_put_date", "賣回日"],
+      ["maturity_date", "到期日"],
+      ["source_id", "來源"],
+    ],
+  },
 };
 
-function periodKey(item) {
-  const period = item.report_period || {};
-  return `${period.start || ""}_${period.end || ""}`;
+function $(id) {
+  return document.getElementById(id);
 }
 
-function periodLabel(item) {
-  const period = item.report_period || {};
-  return `${period.start || ""} ~ ${period.end || ""}`;
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
 }
 
-function formatNumber(value) {
+function formatNumber(value, key = "") {
   if (value === null || value === undefined || value === "") return "";
-  if (typeof value === "number") return value.toLocaleString("zh-TW");
-  return value;
+  if (key === "source_id") return escapeHtml(sourceName(value));
+  if (typeof value !== "number") return escapeHtml(value);
+  if (key.includes("ratio") || key.includes("rate")) return `${(value * 100).toFixed(1)}%`;
+  return value.toLocaleString("zh-TW", { maximumFractionDigits: 3 });
 }
 
-function csvEscape(value) {
-  return `"${String(value ?? "").replaceAll('"', '""')}"`;
+function formatDateTime(value) {
+  if (!value) return "";
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return value;
+  return parsed.toLocaleString("zh-TW", { hour12: false });
 }
 
-function initPeriodFilter() {
-  const select = document.getElementById("periodFilter");
-  select.innerHTML = historyData
-    .map((item) => `<option value="${periodKey(item)}">${periodLabel(item)}</option>`)
-    .join("");
-  select.value = periodKey(data);
-  select.addEventListener("change", () => {
-    data = historyData.find((item) => periodKey(item) === select.value) || data;
-    resetSignalFilter();
-    renderAll();
-  });
+function renderHeader() {
+  $("subtitle").textContent = `最新來源日期 ${data.latest_source_date || "-"}，更新時間 ${formatDateTime(data.generated_at) || "-"}`;
 }
 
-function initSummary() {
+function renderMetrics() {
   const summary = data.summary || {};
-  const metrics = [
-    ["高成交量", summary.high_volume_count],
-    ["新掛牌", summary.new_listings_count],
-    ["高轉換量", summary.conversion_large_count],
-    ["大額賣回", summary.sellback_large_count],
-    ["贖回風險", summary.company_call_count],
+  const rows = [
+    ["報價標的", summary.quote_count || 0],
+    ["發行案件", summary.primary_market_count || 0],
+    ["事件提醒", summary.event_count || 0],
+    ["納入檔案", summary.included_files || 0],
+    ["來源日期", data.latest_source_date || "-"],
   ];
-  document.getElementById("summary").innerHTML =
-    metrics
-      .map(([label, value]) => `<article class="metric"><span>${label}</span><strong>${formatNumber(value)}</strong></article>`)
-      .join("") +
-    `<article class="metric wide"><span>市場解讀</span><strong>${summary.interpretation_zh || ""}</strong></article>`;
+  $("metrics").innerHTML = rows
+    .map(([label, value]) => `<div class="metric"><span>${label}</span><strong>${formatNumber(value)}</strong></div>`)
+    .join("");
 }
 
-function initWarnings() {
-  const warnings = data.warnings || [];
-  const node = document.getElementById("warnings");
-  node.innerHTML = warnings.length
-    ? warnings.map((warning) => `<div class="warning-card"><strong>${warning.table}</strong>：${warning.message}</div>`).join("")
-    : "";
-}
-
-function resetSignalFilter() {
-  const select = document.getElementById("signalFilter");
-  const previous = select.value;
-  const signals = new Set();
-  (data.watchlist || []).forEach((row) => {
-    String(row.signal_type || "")
-      .split("、")
-      .filter(Boolean)
-      .forEach((signal) => signals.add(signal));
-  });
-  select.innerHTML = `<option value="">全部訊號</option>` +
-    [...signals].sort().map((signal) => `<option value="${signal}">${signal}</option>`).join("");
-  if ([...signals].includes(previous)) select.value = previous;
-}
-
-function initFilters() {
-  resetSignalFilter();
-  ["search", "signalFilter", "riskFilter", "sortBy"].forEach((id) => {
-    document.getElementById(id).addEventListener("input", renderWatchlist);
-  });
-  document.getElementById("exportCsv").addEventListener("click", exportCsv);
-}
-
-function sortValue(row, sortBy) {
-  const raw = row.raw || {};
-  if (sortBy === "volume") return raw.high_volume?.weekly_volume || 0;
-  if (sortBy === "remaining") {
-    const ratios = Object.values(raw)
-      .map((item) => item.remaining_ratio_pct)
-      .filter((value) => typeof value === "number");
-    return ratios.length ? Math.min(...ratios) : 999;
-  }
-  if (sortBy === "listing") return Date.parse(raw.new_listings?.listing_date || raw.auction_cases?.listing_date || "1900-01-01");
-  return row.score || 0;
+function renderSources() {
+  $("sourceRows").innerHTML = (data.source_files || [])
+    .map((file) => `<div class="source-row ${file.included ? "" : "muted"}">
+      <div>
+        <strong>${escapeHtml(file.name)}</strong>
+        <span>${escapeHtml(file.source_date || "")}</span>
+      </div>
+      <small>${file.included ? "已納入" : "未納入"}</small>
+    </div>`)
+    .join("");
+  $("warningRows").innerHTML = (data.warnings || [])
+    .map((warning) => `<div class="warning-row">
+      <strong>${escapeHtml(warning.source_file || "來源警示")}</strong>
+      <span>${escapeHtml(warning.message || "")}</span>
+    </div>`)
+    .join("");
 }
 
 function renderWatchlist() {
-  const search = document.getElementById("search").value.trim().toLowerCase();
-  const signal = document.getElementById("signalFilter").value;
-  const risk = document.getElementById("riskFilter").value;
-  const sortBy = document.getElementById("sortBy").value;
-
-  currentRows = (data.watchlist || [])
-    .filter((row) => !search || `${row.code} ${row.name}`.toLowerCase().includes(search))
-    .filter((row) => !signal || String(row.signal_type).includes(signal))
-    .filter((row) => !risk || row.risk_level === risk)
-    .sort((a, b) => sortValue(b, sortBy) - sortValue(a, sortBy));
-
-  document.getElementById("resultCount").textContent = `${currentRows.length} 檔`;
-  document.getElementById("watchlistBody").innerHTML = currentRows
-    .map((row, index) => {
-      const badge = actionClass[row.suggested_action] || "watch";
-      const riskClass = row.risk_level === "高" ? "risk-high" : row.risk_level === "中" ? "risk-mid" : "";
-      return `<tr data-code="${row.code}">
-        <td>${index + 1}</td>
-        <td>${row.code}</td>
-        <td>${row.name}</td>
-        <td>${row.score}</td>
-        <td>${row.signal_type}</td>
-        <td class="${riskClass}">${row.risk_level}</td>
-        <td><span class="badge ${badge}">${row.suggested_action}</span></td>
-        <td>${row.trading_interpretation}</td>
-      </tr>`;
+  const issueCodes = new Set(primaryRows.map((row) => row.cb_code));
+  const eventStockCodes = new Set(eventRows.map((row) => row.stock_code));
+  const rows = quoteRows
+    .map((quote) => {
+      let score = 0;
+      if (quote.premium_per_100 !== undefined) score += 25;
+      if (quote.option_expiration) score += 15;
+      if (issueCodes.has(quote.cb_code)) score += 20;
+      if (eventStockCodes.has(quote.stock_code)) score += 20;
+      if (quote.premium_ratio !== undefined && quote.premium_ratio < 0.2) score += 15;
+      return { ...quote, score: Math.min(score, 100) };
     })
+    .sort((a, b) => (b.score || 0) - (a.score || 0))
+    .slice(0, 12);
+  $("watchlistCount").textContent = `${rows.length} 筆`;
+  $("watchlistRows").innerHTML = rows
+    .map((row) => `<button class="watch-row" type="button" data-code="${escapeHtml(row.cb_code)}">
+      <span class="score">${formatNumber(row.score)}</span>
+      <span>
+        <strong>${escapeHtml(row.cb_code)} ${escapeHtml(row.cb_name || "")}</strong>
+        <small>權利金 ${formatNumber(row.premium_per_100)}，到期 ${escapeHtml(row.option_expiration || "-")}</small>
+      </span>
+    </button>`)
     .join("");
-  document.querySelectorAll("#watchlistBody tr").forEach((row) => {
-    row.addEventListener("click", () => openModal(row.dataset.code));
+  document.querySelectorAll(".watch-row").forEach((button) => {
+    button.addEventListener("click", () => {
+      $("viewSelect").value = "quotes";
+      $("searchInput").value = button.dataset.code;
+      renderTable();
+      document.querySelector(".table-section").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
   });
 }
 
-function renderDetailTables() {
-  const container = document.getElementById("detailTables");
-  container.innerHTML = Object.entries(data.tables || {})
-    .map(([key, rows]) => {
-      const sample = rows[0] || {};
-      const columns = Object.keys(sample).slice(0, 6);
-      const body = rows
-        .slice(0, 12)
-        .map((row) => `<tr>${columns.map((column) => `<td>${formatNumber(row[column])}</td>`).join("")}</tr>`)
-        .join("");
-      return `<article class="table-card">
-        <h2>${tableLabels[key] || key}</h2>
-        <div class="mini-table">
-          <table>
-            <thead><tr>${columns.map((column) => `<th>${column}</th>`).join("")}</tr></thead>
-            <tbody>${body}</tbody>
-          </table>
-        </div>
-      </article>`;
-    })
-    .join("");
-}
-
-function barChart(containerId, items, options = {}) {
-  const node = document.getElementById(containerId);
-  const max = Math.max(...items.map((item) => item.value), 1);
-  node.innerHTML = `<div class="bar-chart">
-    ${items.map((item) => `
-      <div class="bar-row">
-        <span class="bar-label">${item.label}</span>
-        <div class="bar-track"><div class="bar-fill" style="width:${Math.max(3, item.value / max * 100)}%"></div></div>
-        <span class="bar-value">${options.percent ? `${item.value}%` : formatNumber(item.value)}</span>
-      </div>
-    `).join("")}
-  </div>`;
-}
-
-function renderSignalChart() {
-  const tables = data.tables || {};
-  const items = [
-    ["轉換量", tables.conversion_large?.length || 0],
-    ["新掛牌", tables.new_listings?.length || 0],
-    ["賣回", tables.sellback_large?.length || 0],
-    ["贖回", tables.company_calls?.length || 0],
-    ["流動性", tables.high_volume?.length || 0],
-    ["競拍", tables.auction_cases?.length || 0],
-  ].map(([label, value]) => ({ label, value }));
-  barChart("signalChart", items);
-}
-
-function renderScoreChart() {
-  const items = (data.watchlist || [])
-    .slice(0, 10)
-    .map((row) => ({ label: `${row.code} ${row.name}`, value: row.score || 0 }));
-  barChart("scoreChart", items);
-}
-
-function renderConversionChart() {
-  const rows = (data.tables?.conversion_large || []).slice(0, 12);
-  const maxVolume = Math.max(...rows.map((row) => row.weekly_conversion_volume || 0), 1);
-  const maxIntensity = Math.max(...rows.map((row) => row.conversion_intensity_pct || 0), 1);
-  const width = 640;
-  const height = 280;
-  const points = rows.map((row, index) => {
-    const x = 52 + ((row.weekly_conversion_volume || 0) / maxVolume) * 520;
-    const y = 230 - ((row.conversion_intensity_pct || 0) / maxIntensity) * 180;
-    return { ...row, index, x, y };
+function initFilters() {
+  const sources = [...new Set((data.source_files || []).map((file) => file.name))].sort();
+  $("sourceSelect").innerHTML =
+    `<option value="">全部來源</option>` + sources.map((name) => `<option value="${escapeHtml(name)}">${escapeHtml(name)}</option>`).join("");
+  ["searchInput", "viewSelect", "sourceSelect", "sortSelect"].forEach((id) => {
+    $(id).addEventListener("input", renderTable);
   });
-  document.getElementById("conversionChart").innerHTML = `
-    <svg class="svg-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="轉換量與轉換強度散點圖">
-      <line x1="46" y1="230" x2="585" y2="230" />
-      <line x1="46" y1="38" x2="46" y2="230" />
-      <text x="46" y="258">轉換量</text>
-      <text x="12" y="34">強度</text>
-      ${points.map((point) => `
-        <g>
-          <circle cx="${point.x}" cy="${point.y}" r="7" />
-          <text x="${point.x + 10}" y="${point.y + 4}">${point.code}</text>
-        </g>
-      `).join("")}
-    </svg>`;
+  $("downloadJson").addEventListener("click", () => downloadFile(`cbas-${data.latest_source_date || "latest"}.json`, JSON.stringify(data, null, 2), "application/json"));
+  $("downloadCsv").addEventListener("click", downloadCurrentCsv);
 }
 
-function renderTrendChart() {
-  const items = historyData.map((item) => ({
-    label: (item.report_period?.end || "").slice(5),
-    conversion: item.summary?.conversion_large_count || 0,
-    listing: item.summary?.new_listings_count || 0,
-    risk: item.summary?.company_call_count || 0,
-  }));
-  const max = Math.max(...items.flatMap((item) => [item.conversion, item.listing, item.risk]), 1);
-  document.getElementById("trendChart").innerHTML = `
-    <div class="trend-chart">
-      ${items.map((item) => `
-        <div class="trend-group">
-          <div class="trend-bars">
-            <span title="高轉換量" style="height:${Math.max(4, item.conversion / max * 100)}%"></span>
-            <span title="新掛牌" style="height:${Math.max(4, item.listing / max * 100)}%"></span>
-            <span title="贖回風險" style="height:${Math.max(4, item.risk / max * 100)}%"></span>
-          </div>
-          <small>${item.label}</small>
-        </div>
-      `).join("")}
-    </div>
-    <div class="legend"><span class="dot conversion"></span>高轉換量 <span class="dot listing"></span>新掛牌 <span class="dot risk"></span>贖回風險</div>`;
+function currentRows() {
+  const view = views[$("viewSelect").value];
+  const search = $("searchInput").value.trim().toLowerCase();
+  const source = $("sourceSelect").value;
+  const sort = $("sortSelect").value;
+  const searchable = (row) => Object.values(row).join(" ").toLowerCase();
+  const rows = view
+    .rows()
+    .filter((row) => !source || sourceName(row.source_id) === source)
+    .filter((row) => !search || searchable(row).includes(search));
+  rows.sort((a, b) => {
+    if (sort === "premium") return (b.premium_per_100 || b.premium_reference || 0) - (a.premium_per_100 || a.premium_reference || 0);
+    if (sort === "date") return String(b.option_expiration || b.listing_date || b.redeem_date || "").localeCompare(String(a.option_expiration || a.listing_date || a.redeem_date || ""));
+    if (sort === "score") return (b.score || 0) - (a.score || 0);
+    return String(a.cb_code || a.stock_code || "").localeCompare(String(b.cb_code || b.stock_code || ""));
+  });
+  return rows;
 }
 
-function renderCharts() {
-  renderSignalChart();
-  renderScoreChart();
-  renderConversionChart();
-  renderTrendChart();
+function renderTable() {
+  const view = views[$("viewSelect").value];
+  const rows = currentRows();
+  $("tableTitle").textContent = view.title;
+  $("tableEyebrow").textContent = view.eyebrow;
+  $("rowCount").textContent = `${rows.length} 筆`;
+  $("tableHead").innerHTML = `<tr>${view.columns.map(([, label]) => `<th>${label}</th>`).join("")}</tr>`;
+  $("tableBody").innerHTML = rows.length
+    ? rows
+        .map((row) => `<tr>${view.columns.map(([key]) => `<td>${formatNumber(row[key], key)}</td>`).join("")}</tr>`)
+        .join("")
+    : `<tr><td colspan="${view.columns.length}" class="empty">沒有符合條件的資料</td></tr>`;
 }
 
-function openModal(code) {
-  const row = (data.watchlist || []).find((item) => item.code === code);
-  if (!row) return;
-  document.getElementById("modalCode").textContent = row.code;
-  document.getElementById("modalTitle").textContent = row.name;
-  document.getElementById("modalContent").innerHTML = `
-    <p><strong>分數：</strong>${row.score}</p>
-    <p><strong>訊號：</strong>${row.signal_type}</p>
-    <p><strong>建議動作：</strong>${row.suggested_action}</p>
-    <p><strong>交易解讀：</strong>${row.trading_interpretation}</p>
-    <p><strong>風險提醒：</strong>${row.risk_warning}</p>
-    <div class="raw-block">${JSON.stringify(row.raw, null, 2)}</div>
-  `;
-  document.getElementById("detailModal").showModal();
-}
-
-function exportCsv() {
-  const header = ["rank", "code", "name", "score", "signal_type", "risk_level", "suggested_action", "trading_interpretation", "risk_warning"];
-  const lines = [header.join(",")].concat(
-    currentRows.map((row, index) =>
-      header
-        .map((key) => csvEscape(key === "rank" ? index + 1 : row[key]))
-        .join(",")
-    )
-  );
-  const blob = new Blob([lines.join("\n")], { type: "text/csv;charset=utf-8" });
+function downloadFile(filename, content, type) {
+  const blob = new Blob([content], { type: `${type};charset=utf-8` });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = `cbas_priority_watchlist_${periodKey(data)}.csv`;
+  link.download = filename;
   link.click();
   URL.revokeObjectURL(url);
 }
 
-function renderAll() {
-  initSummary();
-  initWarnings();
-  renderCharts();
-  renderWatchlist();
-  renderDetailTables();
+function downloadCurrentCsv() {
+  const view = views[$("viewSelect").value];
+  const rows = currentRows();
+  const csvRows = [view.columns.map(([, label]) => label)];
+  rows.forEach((row) => {
+    csvRows.push(view.columns.map(([key]) => String(row[key] ?? "").replaceAll('"', '""')));
+  });
+  const csv = csvRows.map((row) => row.map((cell) => `"${cell}"`).join(",")).join("\n");
+  downloadFile(`cbas-${$("viewSelect").value}-${data.latest_source_date || "latest"}.csv`, csv, "text/csv");
 }
 
-document.getElementById("closeModal").addEventListener("click", () => document.getElementById("detailModal").close());
-initPeriodFilter();
-initFilters();
+function renderAll() {
+  renderHeader();
+  renderMetrics();
+  renderSources();
+  renderWatchlist();
+  initFilters();
+  renderTable();
+}
+
 renderAll();
